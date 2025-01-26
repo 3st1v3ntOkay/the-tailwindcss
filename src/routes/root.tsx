@@ -15,9 +15,10 @@ export function Root() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/tailwindcss" element={<Home />} />
-          <Route path="/tailwindcss" element={<TailwindCSS />} />
+          <Route index element={<Home />} />
+
           <Route path="/youtube" element={<YouTube />} />
+          <Route path="/tailwindcss" element={<TailwindCSS />} />
         </Route>
       </Routes>
     </BrowserRouter>

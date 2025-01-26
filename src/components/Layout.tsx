@@ -4,7 +4,10 @@ export function Layout() {
   return (
     <>
       <header>
-        this is the header layout
+        <Link to="/">home</Link>
+
+        <Link to="/youtube">YouTube</Link>
+        <Link to="/tailwindcss">TailwindCSS</Link>
       </header>
 
       <Outlet />

@@ -1,14 +1,19 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
+import { Theme } from "@radix-ui/themes";
+
 import { Root } from "./routes/root";
 
 import "./index.css";
+import "@radix-ui/themes/styles.css";
 
 const root = createRoot(document.getElementById("root")!);
 
 root.render(
   <StrictMode>
-    <Root />
+    <Theme>
+      <Root />
+    </Theme>
   </StrictMode>,
 );
