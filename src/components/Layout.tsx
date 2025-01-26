@@ -1,13 +1,14 @@
 import { Outlet } from "react-router";
+import { Link } from "@radix-ui/themes";
 
 export function Layout() {
   return (
     <>
       <header>
-        <Link to="/">home</Link>
+        <Link href="/">home</Link>
 
-        <Link to="/youtube">YouTube</Link>
-        <Link to="/tailwindcss">TailwindCSS</Link>
+        <Link href="/youtube">YouTube</Link>
+        <Link href="/tailwindcss">TailwindCSS</Link>
       </header>
 
       <Outlet />
