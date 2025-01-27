@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Geist";
+  src:
+    local("Geist"),
+    url("./assets/fonts/Geist-Regular.woff2") format("woff2");
+}
+
 /* Customizing your colors: https: //tailwindcss.com/docs/colors#customizing-your-colors */
 @theme {
   --color-night: #121417;
@@ -9,4 +16,7 @@
   --color-white-smoke: #F2F2F2;
   --color-white: #FFFFFF;
   --color-imperial-red: #FF0033;
+
+  /* ver si agregar font-geist-semibold, etc */
+  --font-geist: "Geist", ui-sans-serif, system-ui, sans-serif;
 }
