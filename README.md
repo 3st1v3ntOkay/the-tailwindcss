@@ -8,6 +8,12 @@ Here my custom readme about Tailwind v4.0:
 
 2. **[Tailwind CSS v4.0](https://tailwindcss.com/blog/tailwindcss-v4)**
 
+## Essential
+
+This is is my list  of essential parts I consider very good to know to have the best development:
+
+1. **[Theme variables](https://tailwindcss.com/docs/theme)**
+
 ## Resources
 
 > :loudspeaker: Technologies I use in this project
