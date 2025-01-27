@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+/* Customizing your colors: https: //tailwindcss.com/docs/colors#customizing-your-colors */
+@theme {
+  --color-night: #121417;
+  --color-dim-gray: #606060;
+  --color-reversed: #D9D9D9;
+  --color-platinum: #DEE2E6;
+  --color-white-smoke: #F2F2F2;
+  --color-white: #FFFFFF;
+  --color-imperial-red: #FF0033;
+}
