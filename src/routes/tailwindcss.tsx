@@ -1,5 +1,5 @@
 export function TailwindCSS() {
   return (
-    <p>tailwindcss page</p>
+    <p className="font-geist">tailwindcss page</p>
   );
 }

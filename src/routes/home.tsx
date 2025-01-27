@@ -1,5 +1,5 @@
 export function Home() {
   return (
-    <p>home page</p>
+    <p className="font-geist">home page</p>
   );
 }

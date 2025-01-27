@@ -1,5 +1,5 @@
 export function YouTube() {
   return (
-    <p>youtube page</p>
+    <p className="font-geist">youtube page</p >
   );
 }
