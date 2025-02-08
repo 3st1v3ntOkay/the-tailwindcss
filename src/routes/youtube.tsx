@@ -1,5 +1,15 @@
+import { Flex } from "@radix-ui/themes";
+
+import { Information } from "@/components/youtube/Information";
+import { Navbar } from "@/components/youtube/Navbar";
+import { Video } from "@/components/youtube/Video";
+
 export function YouTube() {
   return (
-    <p className="font-geist">youtube page</p >
+    <Flex direction="column">
+      <Navbar />
+      <Video />
+      <Information />
+    </Flex>
   );
 }
