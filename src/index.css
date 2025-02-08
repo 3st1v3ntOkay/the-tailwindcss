@@ -4,18 +4,29 @@
   font-family: "Geist";
   src:
     local("Geist"),
-    url("./assets/fonts/Geist-Regular.woff2") format("woff2");
+    url("./assets/fonts/Geist[wght].woff2") format("woff2");
 }
 
 /* Customizing your colors: https: //tailwindcss.com/docs/colors#customizing-your-colors */
 @theme {
+  /* youtube apps */
   --color-night: #121417;
-  --color-dim-gray: #606060;
-  --color-reversed: #D9D9D9;
-  --color-platinum: #DEE2E6;
-  --color-white-smoke: #F2F2F2;
   --color-white: #FFFFFF;
+
+  --color-dim-gray: #606060;
+  --color-white-smoke: #F2F2F2;
+  --color-platinum: #DEE2E6;
+  --color-reversed: #D9D9D9;
+
   --color-imperial-red: #FF0033;
+
+  /* spotify apps */
+  --color-black: #000;
+  --color-dark-pastel-green: #1CC558;
+  --color-eerie-black: #1f1f1f;
+  --color-eerie-black-2: #242424;
+  --color-silver: #b3b3b3;
+  --color-night-2: #121212;
 
   /* ver si agregar font-geist-semibold, etc */
   --font-geist: "Geist", ui-sans-serif, system-ui, sans-serif;
