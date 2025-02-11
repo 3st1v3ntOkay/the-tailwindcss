@@ -1,17 +1,18 @@
 import { Outlet } from "react-router";
 import { Link } from "@radix-ui/themes";
 
-export function Layout() {
-  return (
-    <>
-      <header>
-        <Link href="/">home</Link>
+import { ParentWrapper } from "@/components/ParentWrapper";
 
-        <Link href="/youtube">YouTube</Link>
-        <Link href="/tailwindcss">TailwindCSS</Link>
+export function Layout() {
+  const isParentBorder: boolean = true;
+
+  return (
+    <ParentWrapper border={isParentBorder}>
+      <header>
+        <Link href="/">back home</Link>
       </header>
 
       <Outlet />
-    </>
+    </ParentWrapper>
   );
 }
