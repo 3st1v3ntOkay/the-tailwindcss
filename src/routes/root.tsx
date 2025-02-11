@@ -4,12 +4,13 @@ import {
   Route,
 } from "react-router";
 
-import { Home } from "@/routes/home";
-import { YouTube } from "@/routes/youtube";
-import { YouTubeMusic } from "@/routes/youtube-music";
-import { Spotify } from "@/routes/spotify";
+import { Home } from "./home";
 
-import { Fake } from "@/routes/fake";
+import { YouTube } from "./progress/youtube";
+import { YouTubeMusic } from "./progress/youtube-music";
+import { Spotify } from "./progress/spotify";
+
+import { Fake } from "./done/fake";
 
 import { Layout } from "@/components/Layout";
 
