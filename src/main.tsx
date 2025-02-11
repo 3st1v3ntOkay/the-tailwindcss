@@ -12,7 +12,7 @@ const root = createRoot(document.getElementById("root")!);
 
 root.render(
   <StrictMode>
-    <Theme>
+    <Theme accentColor="indigo" className="p-4">
       <Root />
     </Theme>
   </StrictMode>,
