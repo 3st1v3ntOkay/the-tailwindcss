@@ -4,6 +4,7 @@ import {
 
 import { ChildrenWrapper } from "@/components/ChildrenWrapper";
 import { ParentWrapper } from "@/components/ParentWrapper";
+import { Empty } from "@/components/Empty";
 
 import { dataDone, dataProgress } from "@/data/home.data";
 
@@ -45,7 +46,7 @@ export function Home() {
             {name}
           </Link>
         )) : (
-          <div>empty data</div>
+          <Empty />
         )}
       </ChildrenWrapper>
 
@@ -63,7 +64,7 @@ export function Home() {
             {name}
           </Link>
         )) : (
-          <div>empty data</div>
+          <Empty />
         )}
       </ChildrenWrapper>
     </ParentWrapper>

@@ -1,6 +1,6 @@
 import { ChildrenWrapper } from "@/components/ChildrenWrapper";
 
-export function IntagramStory() {
+export function InstagramStory() {
   const isChildrenBorder: boolean = true;
 
   return (
