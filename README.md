@@ -26,6 +26,12 @@ This is is my list  of essential parts I consider very good to know to have the 
 6. **[eslint](https://eslint.org/)**
 7. **[vite](https://vite.dev/)**
 
+8. **[reactbits](https://www.reactbits.dev/)**
+9. **[fancy components*](https://www.fancycomponents.dev/)**
+10. **[motion primitives](https://motion-primitives.com/)**
+
+11. **[gsap](https://gsap.com/)**
+
 ## Extras
 
 Extra resources that you could find interesting:
