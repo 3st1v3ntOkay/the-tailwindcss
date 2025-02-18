@@ -1,27 +1,30 @@
 import { Link } from "@radix-ui/themes";
-import { ChildrenWrapper } from "./ChildrenWrapper";
 
 import type { ReactNode } from "react";
 
-export function AboutDemo({
+export function NotesDescription({
   children,
 }: {
   children: ReactNode;
 }) {
-  const isChildrenBorder: boolean = true;
-
   return (
-    <ChildrenWrapper border={isChildrenBorder}>
-      <p className="font-geist">some information about this demo</p>
-
-      <div className="flex gap-4 overflow-x-scroll">
-        {children}
-      </div>
-    </ChildrenWrapper>
+    <p className="font-geist">{children}</p>
   );
 }
 
-export function InfoContainer({
+export function Notes({
+  children,
+}: {
+  children: ReactNode;
+}) {
+  return (
+    <div className="flex gap-4 overflow-x-scroll">
+      {children}
+    </div>
+  );
+}
+
+export function Note({
   title,
   linkUrl,
   linkName,

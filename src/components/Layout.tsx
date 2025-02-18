@@ -1,18 +1,16 @@
 import { Outlet } from "react-router";
 import { Link } from "@radix-ui/themes";
 
-import { ParentWrapper } from "@/components/ParentWrapper";
+import { FlexWrapper } from "@/components/FlexWrapper";
 
 export function Layout() {
-  const isParentBorder: boolean = true;
-
   return (
-    <ParentWrapper border={isParentBorder}>
+    <FlexWrapper mode="dev" color="blue">
       <header>
         <Link href="/">back home</Link>
       </header>
 
       <Outlet />
-    </ParentWrapper>
+    </FlexWrapper>
   );
 }

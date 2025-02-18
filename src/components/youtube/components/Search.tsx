@@ -3,7 +3,7 @@ import { IconImage } from "./IconImage";
 
 import type { ReactNode } from "react";
 
-import SearchIcon from "@/assets/svg/material-icons/search.svg";
+import SearchIcon from "@/assets/youtube/icons/search.svg";
 
 export function Search({
   children,

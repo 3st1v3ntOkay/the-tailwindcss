@@ -3,16 +3,17 @@ import {
   Avatar,
 } from "@radix-ui/themes";
 
-import AddIcon from "@/assets/svg/material-icons/add.svg";
-import MicIcon from "@/assets/svg/material-icons/mic.svg";
-import NotificationIcon from "@/assets/svg/material-icons/notifications-none.svg";
-
-import AvatarImage from "@/assets/images/bye-bye-cat.jpg";
 import { TextIcon } from "./components/TextIcon";
 import { IconImage } from "./components/IconImage";
 import { SingleIcon } from "./components/SingleIcon";
 import { Search } from "./components/Search";
 import { YouTube } from "./components/YouTube";
+
+import AddIcon from "@/assets/youtube/icons/add.svg";
+import MicIcon from "@/assets/youtube/icons/mic.svg";
+import NotificationIcon from "@/assets/youtube/icons/notifications-none.svg";
+
+import AvatarImage from "@/assets/youtube/bye-bye-cat.jpg";
 
 export function Navbar() {
   return (

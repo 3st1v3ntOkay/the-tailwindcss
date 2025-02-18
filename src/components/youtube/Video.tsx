@@ -1,4 +1,4 @@
-import myvideo from "@/assets/videos/映画『ヴイナス戦記』冒頭10分映像【Blu-ray ＜特装限定版＞　7月26日（金）.mp4";
+import myvideo from "@/assets/youtube/videos/venus-war.mp4";
 
 export function Video() {
   return (

@@ -1,6 +1,6 @@
 import { Link } from "@radix-ui/themes";
 
-import YouTubeLogoType from "@/assets/images/youtube-logotype.png";
+import YouTubeLogoType from "@/assets/youtube/youtube-logotype.png";
 
 type CountryOptions = "MX" | "JP" | "US";
 
