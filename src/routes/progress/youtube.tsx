@@ -6,7 +6,12 @@ import { Video } from "@/components/youtube/Video";
 
 export function YouTube() {
   return (
-    <FlexWrapper mode="dev" color="blue">
+    <FlexWrapper
+      mode="dev"
+      color="blue"
+      direction="column"
+      gap="2"
+    >
       <Navbar />
       <Video />
       <Information />

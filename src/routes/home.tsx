@@ -16,7 +16,12 @@ export function Home() {
   const isDataProgress: boolean = true;
 
   return (
-    <FlexWrapper mode="dev" color="red">
+    <FlexWrapper
+      mode="dev"
+      color="red"
+      direction="column"
+      gap="2"
+    >
       <div>
         <h1 className="font-geist font-medium text-xl text-night">
           Demos.
@@ -27,7 +32,12 @@ export function Home() {
         </p>
       </div>
 
-      <FlexWrapper mode="dev" color="blue">
+      <FlexWrapper
+        mode="dev"
+        color="blue"
+        direction="column"
+        gap="2"
+      >
         <NotesDescription>
           note description
         </NotesDescription>
@@ -47,7 +57,12 @@ export function Home() {
         </Notes>
       </FlexWrapper>
 
-      <FlexWrapper mode="dev" color="blue">
+      <FlexWrapper
+        mode="dev"
+        color="blue"
+        direction="column"
+        gap="0"
+      >
         <h2 className="font-geist font-medium text-md text-night">
           Done.
         </h2>
@@ -70,7 +85,12 @@ export function Home() {
         )}
       </FlexWrapper>
 
-      <FlexWrapper mode="dev" color="blue">
+      <FlexWrapper
+        mode="dev"
+        color="blue"
+        direction="column"
+        gap="0"
+      >
         <h2 className="font-geist font-medium text-md text-night">
           In progress.
         </h2>

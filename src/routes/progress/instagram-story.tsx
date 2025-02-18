@@ -24,8 +24,18 @@ export function InstagramStory() {
   const inputRef = useRef<ElementRef<"input">>(null);
 
   return (
-    <FlexWrapper mode="dev" color="blue">
-      <FlexWrapper mode="dev" color="blue">
+    <FlexWrapper
+      mode="dev"
+      color="blue"
+      direction="column"
+      gap="2"
+    >
+      <FlexWrapper
+        mode="dev"
+        color="blue"
+        direction="column"
+        gap="2"
+      >
         <NotesDescription>
           note description
         </NotesDescription>

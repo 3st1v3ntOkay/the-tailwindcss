@@ -8,8 +8,18 @@ import {
 
 export function SwatchHover() {
   return (
-    <FlexWrapper mode="dev" color="blue">
-      <FlexWrapper mode="dev" color="blue">
+    <FlexWrapper
+      mode="dev"
+      color="blue"
+      direction="column"
+      gap="2"
+    >
+      <FlexWrapper
+        mode="dev"
+        color="blue"
+        direction="column"
+        gap="2"
+      >
         <NotesDescription>
           note description
         </NotesDescription>
