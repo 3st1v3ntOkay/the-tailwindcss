@@ -81,7 +81,6 @@ export function Home() {
             key={id}
             href={url}
             underline="hover"
-            target="_blank"
             className="font-geist text-purple-600"
           >
             {name}
@@ -110,7 +109,6 @@ export function Home() {
             key={id}
             href={url}
             underline="hover"
-            target="_blank"
             className="font-geist"
           >
             {name}
@@ -139,7 +137,6 @@ export function Home() {
             key={id}
             href={url}
             underline="hover"
-            target="_blank"
             className="font-geist"
           >
             {name}

@@ -35,8 +35,13 @@ export function Note({
 }) {
   return (
     <div className="border-2 border-platinum border-solid p-2 w-fit rounded-[8px] shrink-0">
-      <h3 className="font-medium text-md">{title}</h3>
-      <Link href={linkUrl}>{linkName}</Link>
+      <h3 className="font-medium text-md">
+        {title}
+      </h3>
+
+      <Link href={linkUrl} target="_blank">
+        {linkName}
+      </Link>
     </div>
   );
 }
