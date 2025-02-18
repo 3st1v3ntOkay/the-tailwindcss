@@ -13,7 +13,7 @@ export function FlexWrapper({
   mode: "dev" | "prod";
   color: ColorsAvailable;
 }) {
-  const whichMode: string = mode === "dev" ? `border-2 border-dashed border-blue-500 rounded-lg` : "";
+  const whichMode: string = mode === "dev" ? `border-2 border-dashed border-${color}-500 rounded-lg` : "";
 
   return (
     <Flex
