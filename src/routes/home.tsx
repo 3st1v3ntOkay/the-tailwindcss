@@ -9,11 +9,16 @@ import {
   Note,
 } from "@/components/Notes";
 
-import { dataDone, dataProgress } from "@/data/home.data";
+import {
+  dataDone,
+  dataTodo,
+  dataWorking,
+} from "@/data/home.data";
 
 export function Home() {
-  const isDataDone: boolean = true;
-  const isDataProgress: boolean = true;
+  const isDataDone: boolean = false;
+  const isDataTodo: boolean = true;
+  const isDataWorking: boolean = true;
 
   return (
     <FlexWrapper
@@ -23,11 +28,11 @@ export function Home() {
       gap="2"
     >
       <div>
-        <h1 className="font-geist font-medium text-xl text-night">
+        <h1 className="font-geist font-semibold text-xl">
           Demos.
         </h1>
 
-        <p className="font-geist font-light text-night">
+        <p className="font-geist">
           Just any link below to test the demo.
         </p>
       </div>
@@ -76,6 +81,7 @@ export function Home() {
             key={id}
             href={url}
             underline="hover"
+            target="_blank"
             className="font-geist text-purple-600"
           >
             {name}
@@ -95,12 +101,47 @@ export function Home() {
           In progress.
         </h2>
 
-        {isDataProgress ? dataProgress.map(({
+        {isDataTodo ? dataTodo.map(({
           id,
           name,
           url,
         }) => (
-          <Link key={id} href={url} underline="hover" className="font-geist">
+          <Link
+            key={id}
+            href={url}
+            underline="hover"
+            target="_blank"
+            className="font-geist"
+          >
+            {name}
+          </Link>
+        )) : (
+          <Empty />
+        )}
+      </FlexWrapper>
+
+      <FlexWrapper
+        mode="dev"
+        color="blue"
+        direction="column"
+        gap="0"
+      >
+        <h2 className="font-geist font-medium text-md text-night">
+          In progress.
+        </h2>
+
+        {isDataWorking ? dataWorking.map(({
+          id,
+          name,
+          url,
+        }) => (
+          <Link
+            key={id}
+            href={url}
+            underline="hover"
+            target="_blank"
+            className="font-geist"
+          >
             {name}
           </Link>
         )) : (

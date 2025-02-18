@@ -1,5 +1,5 @@
 export function Empty() {
   return (
-    <div>empty data</div>
+    <p className="font-geist">empty data</p>
   );
 }

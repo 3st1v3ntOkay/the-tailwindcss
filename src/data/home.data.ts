@@ -4,38 +4,35 @@ interface TData {
   url: string;
 }
 
-export const dataDone: TData[] = [
-  {
-    id: 1,
-    name: "fake page",
-    url: "/done/fake",
-  },
-];
+export const dataDone: TData[] = [];
 
-export const dataProgress: TData[] = [
+export const dataTodo: TData[] = [
   {
     id: 1,
     name: "youtube video player",
-    url: "/progress/youtube",
+    url: "/todo/youtube",
   },
   {
     id: 2,
     name: "youtube music",
-    url: "/progress/youtube-music",
+    url: "/todo/youtube-music",
   },
   {
     id: 3,
     name: "spotify",
-    url: "/progress/spotify",
+    url: "/todo/spotify",
   },
   {
     id: 4,
-    name: "instagram story",
-    url: "/progress/instagram-story",
-  },
-  {
-    id: 5,
     name: "swatch hover",
-    url: "/progress/swatch-hover",
+    url: "/todo/swatch-hover",
+  },
+];
+
+export const dataWorking: TData[] = [
+  {
+    id: 1,
+    name: "instagram story",
+    url: "/working/instagram-story",
   },
 ];
