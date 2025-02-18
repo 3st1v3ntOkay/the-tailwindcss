@@ -30,4 +30,9 @@
 
   /* ver si agregar font-geist-semibold, etc */
   --font-geist: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-caslon: "Libre Caslon Text";
+  --font-autograf: "Autograf PERSONAL USE ONLY";
+
+  /* instagram */
+  --aspect-instagram-story: 9 / 16;
 }

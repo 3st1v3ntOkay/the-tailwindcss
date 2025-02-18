@@ -6,12 +6,13 @@ import {
 
 import { Home } from "./home";
 
+import { Fake } from "./done/fake";
+
 import { YouTube } from "./progress/youtube";
 import { YouTubeMusic } from "./progress/youtube-music";
 import { Spotify } from "./progress/spotify";
 import { InstagramStory } from "./progress/instagram-story";
-
-import { Fake } from "./done/fake";
+import { SwatchHover } from "./progress/swatch-hover";
 
 import { Layout } from "@/components/Layout";
 
@@ -31,6 +32,7 @@ export function Root() {
             <Route path="/progress/youtube-music" element={<YouTubeMusic />} />
             <Route path="/progress/spotify" element={<Spotify />} />
             <Route path="/progress/instagram-story" element={<InstagramStory />} />
+            <Route path="/progress/swatch-hover" element={<SwatchHover />} />
           </Route>
         </Route>
       </Routes>
