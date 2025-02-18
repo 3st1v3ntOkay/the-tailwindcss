@@ -1,20 +1,30 @@
 import { FlexWrapper } from "@/components/FlexWrapper";
 
-import { AboutDemo, InfoContainer } from "@/components/Notes";
+import {
+  NotesDescription,
+  Notes,
+  Note,
+} from "@/components/Notes";
 
 export function SwatchHover() {
   return (
     <FlexWrapper mode="dev" color="blue">
-      <AboutDemo>
-        {...Array(8).fill(0).map((_value, index) => (
-          <InfoContainer
-            key={index}
-            title="author"
-            linkUrl="https://codepen.io/jh3y/pen/mybQbMW?editors=0110"
-            linkName="Swatch Hover w/ CSS + GSAP"
-          />
-        ))}
-      </AboutDemo>
+      <FlexWrapper mode="dev" color="blue">
+        <NotesDescription>
+          note description
+        </NotesDescription>
+
+        <Notes>
+          {...Array(8).fill(0).map((_value, index) => (
+            <Note
+              key={index}
+              title="author"
+              linkUrl="https://codepen.io/jh3y/pen/mybQbMW?editors=0110"
+              linkName="Swatch Hover w/ CSS + GSAP"
+            />
+          ))}
+        </Notes>
+      </FlexWrapper>
 
       <div className="container bg-night">
         <h3>greys.</h3>

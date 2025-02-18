@@ -1,11 +1,9 @@
-import { ChildrenWrapper } from "@/components/FlexWrapper";
+import { FlexWrapper } from "@/components/FlexWrapper";
 
 export function Fake() {
-  const isChildrenBorder: boolean = true;
-
   return (
-    <ChildrenWrapper border={isChildrenBorder}>
+    <FlexWrapper mode="dev" color="green">
       <p className="font-geist">fake done page</p>
-    </ChildrenWrapper>
+    </FlexWrapper>
   );
 }
