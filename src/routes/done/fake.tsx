@@ -1,4 +1,4 @@
-import { ChildrenWrapper } from "@/components/ChildrenWrapper";
+import { ChildrenWrapper } from "@/components/FlexWrapper";
 
 export function Fake() {
   const isChildrenBorder: boolean = true;

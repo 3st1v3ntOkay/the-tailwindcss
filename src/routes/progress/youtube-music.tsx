@@ -1,11 +1,9 @@
-import { ChildrenWrapper } from "@/components/ChildrenWrapper";
+import { FlexWrapper } from "@/components/FlexWrapper";
 
 export function YouTubeMusic() {
-  const isChildrenBorder: boolean = true;
-
   return (
-    <ChildrenWrapper border={isChildrenBorder}>
+    <FlexWrapper mode="dev" color="blue">
       <p className="font-geist">youtube music page</p>
-    </ChildrenWrapper>
+    </FlexWrapper>
   );
 }

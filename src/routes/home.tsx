@@ -1,10 +1,13 @@
-import {
-  Link,
-} from "@radix-ui/themes";
+import { Link } from "@radix-ui/themes";
 
-import { ChildrenWrapper } from "@/components/ChildrenWrapper";
-import { ParentWrapper } from "@/components/ParentWrapper";
+import { FlexWrapper } from "@/components/FlexWrapper";
 import { Empty } from "@/components/Empty";
+
+import {
+  NotesDescription,
+  Notes,
+  Note,
+} from "@/components/Notes";
 
 import { dataDone, dataProgress } from "@/data/home.data";
 
@@ -12,11 +15,8 @@ export function Home() {
   const isDataDone: boolean = true;
   const isDataProgress: boolean = true;
 
-  const isParentBorder: boolean = true;
-  const isChidrenBorder: boolean = true;
-
   return (
-    <ParentWrapper border={isParentBorder}>
+    <FlexWrapper mode="dev" color="green">
       <div>
         <h1 className="font-geist font-medium text-xl text-night">
           Demos.
@@ -27,7 +27,27 @@ export function Home() {
         </p>
       </div>
 
-      <ChildrenWrapper border={isChidrenBorder}>
+      <FlexWrapper mode="dev" color="blue">
+        <NotesDescription>
+          note description
+        </NotesDescription>
+
+        <Notes>
+          <Note
+            title="Idea 1: revisar pagina de Nextjs Config 24"
+            linkName="Nextjs Config 24"
+            linkUrl="https://nextjs.org/conf"
+          />
+
+          <Note
+            title="Idea 2: revisar pagina de Zed IDE"
+            linkName="Zed IDE"
+            linkUrl="https://zed.dev/"
+          />
+        </Notes>
+      </FlexWrapper>
+
+      <FlexWrapper mode="dev" color="blue">
         <h2 className="font-geist font-medium text-md text-night">
           Done.
         </h2>
@@ -48,9 +68,9 @@ export function Home() {
         )) : (
           <Empty />
         )}
-      </ChildrenWrapper>
+      </FlexWrapper>
 
-      <ChildrenWrapper border={isChidrenBorder}>
+      <FlexWrapper mode="dev" color="blue">
         <h2 className="font-geist font-medium text-md text-night">
           In progress.
         </h2>
@@ -66,7 +86,7 @@ export function Home() {
         )) : (
           <Empty />
         )}
-      </ChildrenWrapper>
-    </ParentWrapper>
+      </FlexWrapper>
+    </FlexWrapper>
   );
 }

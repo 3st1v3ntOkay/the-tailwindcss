@@ -1,33 +1,43 @@
 import { Avatar } from "@radix-ui/themes";
 
-import { ChildrenWrapper } from "@/components/ChildrenWrapper";
-import { AboutDemo, InfoContainer } from "@/components/AboutDemo";
+import { FlexWrapper } from "@/components/FlexWrapper";
 
-import { useEffect, useRef, type ReactNode } from "react";
+import {
+  NotesDescription,
+  Notes,
+  Note,
+} from "@/components/Notes";
 
-import Play from "@/assets/instagram/play.svg";
-import ThreeDots from "@/assets/instagram/three-dots.svg";
-import Heart from "@/assets/instagram/heart.svg";
-import Reply from "@/assets/instagram/reply.svg";
+import { useEffect, useRef } from "react";
+import type { ReactNode } from "react";
+import type { ElementRef } from "react";
 
-import Story from "@/assets/instagram/story-002.png";
-import { ElementRef } from "react";
+import Play from "@/assets/instagram/icons/play.svg";
+import ThreeDots from "@/assets/instagram/icons/three-dots.svg";
+import Heart from "@/assets/instagram/icons/heart.svg";
+import Reply from "@/assets/instagram/icons/reply.svg";
+
+import Story from "@/assets/instagram/stories/png/story-001.png";
 
 export function InstagramStory() {
-  const isChildrenBorder: boolean = true;
-
   // investigar como agregar el elementRef en react 19
   const inputRef = useRef<ElementRef<"input">>(null);
 
   return (
-    <ChildrenWrapper border={isChildrenBorder}>
-      <AboutDemo>
-        <InfoContainer
-          title={`<input type=" file">`}
-          linkName="mdn docs"
-          linkUrl="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file"
-        />
-      </AboutDemo>
+    <FlexWrapper mode="dev" color="blue">
+      <FlexWrapper mode="dev" color="blue">
+        <NotesDescription>
+          note description
+        </NotesDescription>
+
+        <Notes>
+          <Note
+            title={`<input type=" file">`}
+            linkName="mdn docs"
+            linkUrl="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file"
+          />
+        </Notes>
+      </FlexWrapper>
 
       <div>
         <label htmlFor="avatar">Choose a profile picture:</label>
@@ -106,7 +116,7 @@ export function InstagramStory() {
           </Center>
         </TopBottomSection>
       </div>
-    </ChildrenWrapper>
+    </FlexWrapper>
   );
 }
 

@@ -1,11 +1,9 @@
-import { ChildrenWrapper } from "@/components/ChildrenWrapper";
+import { FlexWrapper } from "@/components/FlexWrapper";
 
 export function Spotify() {
-  const isChildrenBorder: boolean = true;
-
   return (
-    <ChildrenWrapper border={isChildrenBorder}>
+    <FlexWrapper mode="dev" color="blue">
       <p className="font-geist">spotify page</p>
-    </ChildrenWrapper>
+    </FlexWrapper>
   );
 }

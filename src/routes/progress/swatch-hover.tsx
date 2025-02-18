@@ -1,11 +1,10 @@
-import { AboutDemo, InfoContainer } from "@/components/AboutDemo";
-import { ChildrenWrapper } from "@/components/ChildrenWrapper";
+import { FlexWrapper } from "@/components/FlexWrapper";
+
+import { AboutDemo, InfoContainer } from "@/components/Notes";
 
 export function SwatchHover() {
-  const isChildrenBorder: boolean = true;
-
   return (
-    <ChildrenWrapper border={isChildrenBorder}>
+    <FlexWrapper mode="dev" color="blue">
       <AboutDemo>
         {...Array(8).fill(0).map((_value, index) => (
           <InfoContainer
@@ -79,6 +78,6 @@ export function SwatchHover() {
           ></path>
         </svg>
       </a>
-    </ChildrenWrapper>
+    </FlexWrapper>
   );
 }
