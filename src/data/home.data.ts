@@ -34,7 +34,7 @@ export const dataProgress: TData[] = [
     url: "/progress/instagram-story",
   },
   {
-    id: 4,
+    id: 5,
     name: "swatch hover",
     url: "/progress/swatch-hover",
   },

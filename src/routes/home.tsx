@@ -16,7 +16,7 @@ export function Home() {
   const isDataProgress: boolean = true;
 
   return (
-    <FlexWrapper mode="dev" color="green">
+    <FlexWrapper mode="dev" color="red">
       <div>
         <h1 className="font-geist font-medium text-xl text-night">
           Demos.
