@@ -4,16 +4,19 @@ import {
   Route,
 } from "react-router";
 
-import { Home } from "./home";
+import { Layout } from "@component/Layout";
+import { Empty } from "@component/Empty";
 
-import { Layout } from "@/components/Layout";
-import { Empty } from "@/components/Empty";
+import { Home } from "@route/home";
 
-import { YouTube } from "./todo/youtube";
-import { YouTubeMusic } from "./todo/youtube-music";
-import { Spotify } from "./todo/spotify";
-import { InstagramStory } from "./working/instagram-story";
-import { SwatchHover } from "./todo/swatch-hover";
+/* todo ... */
+import { YouTube } from "@route/todo/youtube";
+import { YouTubeMusic } from "@route/todo/youtube-music";
+import { Spotify } from "@route/todo/spotify";
+import { SwatchHover } from "@route/todo/swatch-hover";
+
+/* working ... */
+import { InstagramStory } from "@route/working/instagram-story";
 
 export function Root() {
   return (

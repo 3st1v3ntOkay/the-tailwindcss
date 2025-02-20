@@ -1,4 +1,4 @@
-import { Link } from "@radix-ui/themes";
+import { Link } from "./Link";
 
 import type { ReactNode } from "react";
 
@@ -39,7 +39,7 @@ export function Note({
         {title}
       </h3>
 
-      <Link href={linkUrl} target="_blank">
+      <Link url={linkUrl} target="_blank">
         {linkName}
       </Link>
     </div>

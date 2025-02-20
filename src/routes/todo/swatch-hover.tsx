@@ -1,24 +1,26 @@
-import { FlexWrapper } from "@/components/FlexWrapper";
+import { FlexWrapper } from "@component/FlexWrapper";
 
 import {
   NotesDescription,
   Notes,
   Note,
-} from "@/components/Notes";
+} from "@component/Notes";
 
 export function SwatchHover() {
   return (
     <FlexWrapper
       mode="dev"
-      color="blue"
-      direction="column"
+      color="border-blue-500"
+      direction="flex-col"
       gap="2"
+      padding
     >
       <FlexWrapper
         mode="dev"
-        color="blue"
-        direction="column"
+        color="border-blue-500"
+        direction="flex-col"
         gap="2"
+        padding
       >
         <NotesDescription>
           note description

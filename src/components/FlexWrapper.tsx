@@ -1,35 +1,33 @@
-import { Flex } from "@radix-ui/themes";
+import { whichMode } from "./utils/whichMode";
 
 import type { ReactNode } from "react";
+import type { ColorsAvailable, Mode } from "./utils/whichMode";
 
-type ColorsAvailable = "red" | "orange" | "yellow" | "green" | "blue" | "violet";
-
-type FlexDirection = "row" | "column" | "row-reverse" | "column-reverse";
-
-type FlexGap = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
+type FlexDirection = "flex-row" | "flex-col" | "row-reverse" | "flex-row-reverse";
 
 export function FlexWrapper({
   children,
   mode = "dev",
-  color = "blue",
+  color = "border-blue-500",
   gap = "2",
-  direction = "column"
+  direction = "flex-col",
+  padding = true,
 }: {
   children: ReactNode;
-  mode: "dev" | "prod";
+  mode: Mode;
   color: ColorsAvailable;
-  gap: FlexGap;
+  gap: string | "justify-between";
   direction: FlexDirection;
+  padding: boolean;
 }) {
-  const whichMode: string = mode === "dev" ? `border-2 border-dashed border-${color}-500 rounded-lg` : "";
+  const isBetween: string = gap === "justify-between" ? "justify-between items-center" : `gap-${gap}`;
+  const isPadding: string = padding === true ? "p-2" : "";
+
+  console.log(`gap-${gap}`)
 
   return (
-    <Flex
-      className={`${whichMode} p-2`}
-      gap={gap}
-      direction={direction}
-    >
+    <div className={`flex rounded-lg ${isBetween} ${direction} ${isPadding} ${whichMode(mode, color)}`}>
       {children}
-    </Flex>
+    </div>
   );
 }

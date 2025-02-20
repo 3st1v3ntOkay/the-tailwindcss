@@ -1,6 +1,10 @@
+import { useEffect, useRef } from "react";
+import type { ReactNode } from "react";
+import type { ElementRef } from "react";
+
 import { Avatar } from "@radix-ui/themes";
 
-import { FlexWrapper } from "@/components/FlexWrapper";
+import { FlexWrapper } from "@component/FlexWrapper";
 
 import {
   NotesDescription,
@@ -8,16 +12,12 @@ import {
   Note,
 } from "@/components/Notes";
 
-import { useEffect, useRef } from "react";
-import type { ReactNode } from "react";
-import type { ElementRef } from "react";
+import Play from "@asset/instagram/icons/play.svg";
+import ThreeDots from "@asset/instagram/icons/three-dots.svg";
+import Heart from "@asset/instagram/icons/heart.svg";
+import Reply from "@asset/instagram/icons/reply.svg";
 
-import Play from "@/assets/instagram/icons/play.svg";
-import ThreeDots from "@/assets/instagram/icons/three-dots.svg";
-import Heart from "@/assets/instagram/icons/heart.svg";
-import Reply from "@/assets/instagram/icons/reply.svg";
-
-import Story from "@/assets/instagram/stories/png/story-001.png";
+import Story from "@asset/instagram/stories/png/story-001.png";
 
 export function InstagramStory() {
   // investigar como agregar el elementRef en react 19
@@ -26,15 +26,17 @@ export function InstagramStory() {
   return (
     <FlexWrapper
       mode="dev"
-      color="blue"
-      direction="column"
+      color="border-blue-500"
+      direction="flex-col"
       gap="2"
+      padding
     >
       <FlexWrapper
         mode="dev"
-        color="blue"
-        direction="column"
+        color="border-blue-500"
+        direction="flex-col"
         gap="2"
+        padding
       >
         <NotesDescription>
           note description

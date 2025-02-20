@@ -1,16 +1,17 @@
-import { FlexWrapper } from "@/components/FlexWrapper";
+import { FlexWrapper } from "@component/FlexWrapper";
 
-import { Information } from "@/components/youtube/Information";
-import { Navbar } from "@/components/youtube/Navbar";
-import { Video } from "@/components/youtube/Video";
+import { Information } from "@component/ui/youtube/Information";
+import { Navbar } from "@component/ui/youtube/Navbar";
+import { Video } from "@component/ui/youtube/Video";
 
 export function YouTube() {
   return (
     <FlexWrapper
       mode="dev"
-      color="blue"
-      direction="column"
+      color="border-blue-500"
+      direction="flex-col"
       gap="2"
+      padding
     >
       <Navbar />
       <Video />
