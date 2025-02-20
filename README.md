@@ -31,6 +31,7 @@ This is is my list  of essential parts I consider very good to know to have the 
 10. **[motion primitives](https://motion-primitives.com/)**
 
 11. **[gsap](https://gsap.com/)**
+12. **[tailwind-scrollbar](https://www.npmjs.com/package/tailwind-scrollbar)**
 
 ## Extras
 
