@@ -1,4 +1,4 @@
-import { scan } from "react-scan";
+// import { scan } from "react-scan";
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
@@ -7,9 +7,9 @@ import { Root } from "@route/root";
 
 import "./index.css";
 
-scan({
-  enabled: true,
-});
+// scan({
+//   enabled: true,
+// });
 
 const root = createRoot(document.getElementById("root")!);
 

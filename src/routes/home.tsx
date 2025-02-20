@@ -29,7 +29,7 @@ import {
 export function Home() {
   const isDataNotes: boolean = true;
 
-  const isDataDone: boolean = false;
+  const isDataDone: boolean = true;
   const isDataTodo: boolean = true;
   const isDataWorking: boolean = true;
 
@@ -93,7 +93,7 @@ export function Home() {
 
       <div className="mb-4"></div>
 
-      <div className="bg-blue-500 text-white ">
+      {/* <div className="bg-blue-500 text-white ">
         <ScrollVelocity
           texts={["nice", "demos"]}
           velocity={velocity}
@@ -101,7 +101,7 @@ export function Home() {
         />
       </div>
 
-      <div className="mb-4"></div>
+      <div className="mb-4"></div> */}
 
       <Title type="h2">Done.</Title>
 
@@ -131,7 +131,7 @@ export function Home() {
             </FlexWrapper>
 
             <FlexWrapper
-              mode="dev"
+              mode="prod"
               color="border-blue-500"
               direction="flex-col"
               gap="0"

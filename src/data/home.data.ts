@@ -16,7 +16,7 @@ export const dataDone: TData[] = [
     status: "done",
     pageUrl: "/done/ascii-text",
     pageName: "ascii text",
-    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores, fugiat iure quia vero dolor similique eveniet illum, expedita quam ad, excepturi quidem laudantium.",
+    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
   },
 ];
 
@@ -27,7 +27,7 @@ export const dataTodo: TData[] = [
     status: "todo",
     pageUrl: "/todo/youtube",
     pageName: "youtube video player",
-    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores, fugiat iure quia vero dolor similique eveniet illum, expedita quam ad, excepturi quidem laudantium.",
+    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ export const dataTodo: TData[] = [
     status: "todo",
     pageUrl: "/todo/youtube-music",
     pageName: "youtube music",
-    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores, fugiat iure quia vero dolor similique eveniet illum, expedita quam ad, excepturi quidem laudantium.",
+    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ export const dataTodo: TData[] = [
     status: "todo",
     pageUrl: "/todo/spotify",
     pageName: "spotify",
-    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores, fugiat iure quia vero dolor similique eveniet illum, expedita quam ad, excepturi quidem laudantium.",
+    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ export const dataTodo: TData[] = [
     status: "todo",
     pageUrl: "/todo/swatch-hover",
     pageName: "swatch hover",
-    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores, fugiat iure quia vero dolor similique eveniet illum, expedita quam ad, excepturi quidem laudantium.",
+    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
   },
 ];
 
@@ -62,7 +62,7 @@ export const dataWorking: TData[] = [
     status: "working",
     pageUrl: "/working/instagram-story",
     pageName: "instagram story",
-    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores, fugiat iure quia vero dolor similique eveniet illum, expedita quam ad, excepturi quidem laudantium.",
+    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
   },
 ];
 

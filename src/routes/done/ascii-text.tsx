@@ -13,11 +13,13 @@ export function AsciiText() {
       gap="2"
       padding
     >
-      <ASCIIText
-        text={text}
-        enableWaves={true}
-        asciiFontSize={8}
-      />
+      <div className="border-2 border-dashed border-blue-500 relative h-128 bg-night">
+        <ASCIIText
+          text={text}
+          enableWaves={true}
+          asciiFontSize={8}
+        />
+      </div>
     </FlexWrapper>
   );
 }
