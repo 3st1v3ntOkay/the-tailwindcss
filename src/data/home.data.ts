@@ -9,7 +9,16 @@ interface TData {
   pageDescription: string;
 }
 
-export const dataDone: TData[] = [];
+export const dataDone: TData[] = [
+  {
+    id: 1,
+    image: RandomAvatar,
+    status: "done",
+    pageUrl: "/done/ascii-text",
+    pageName: "ascii text",
+    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores, fugiat iure quia vero dolor similique eveniet illum, expedita quam ad, excepturi quidem laudantium.",
+  },
+];
 
 export const dataTodo: TData[] = [
   {

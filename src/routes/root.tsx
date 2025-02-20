@@ -7,16 +7,20 @@ import {
 import { Layout } from "@component/Layout";
 import { Empty } from "@component/Empty";
 
+/* default page */
 import { Home } from "@route/home";
 
-/* todo ... */
+/* done */
+import { AsciiText } from "@route/done/ascii-text";
+
+/* working */
+import { InstagramStory } from "@route/working/instagram-story";
+
+/* todo */
 import { YouTube } from "@route/todo/youtube";
 import { YouTubeMusic } from "@route/todo/youtube-music";
 import { Spotify } from "@route/todo/spotify";
 import { SwatchHover } from "@route/todo/swatch-hover";
-
-/* working ... */
-import { InstagramStory } from "@route/working/instagram-story";
 
 export function Root() {
   return (
@@ -26,7 +30,7 @@ export function Root() {
           <Route index element={<Home />} />
 
           <Route path="/done" element={<Layout />}>
-            <Route path="/done/fake" element={<Empty />} />
+            <Route path="/done/ascii-text" element={<AsciiText />} />
           </Route>
 
           <Route path="/todo" element={<Layout />}>
