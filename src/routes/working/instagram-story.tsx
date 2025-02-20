@@ -7,7 +7,6 @@ import { Avatar } from "@radix-ui/themes";
 import { FlexWrapper } from "@component/FlexWrapper";
 
 import {
-  NotesDescription,
   Notes,
   Note,
 } from "@/components/Notes";
@@ -38,10 +37,6 @@ export function InstagramStory() {
         gap="2"
         padding
       >
-        <NotesDescription>
-          note description
-        </NotesDescription>
-
         <Notes>
           <Note
             title={`<input type=" file">`}

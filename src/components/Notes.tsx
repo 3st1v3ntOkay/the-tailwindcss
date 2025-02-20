@@ -1,16 +1,7 @@
+import { Status } from "./Card";
 import { Link } from "./Link";
 
 import type { ReactNode } from "react";
-
-export function NotesDescription({
-  children,
-}: {
-  children: ReactNode;
-}) {
-  return (
-    <p className="font-geist">{children}</p>
-  );
-}
 
 export function Notes({
   children,
@@ -18,7 +9,7 @@ export function Notes({
   children: ReactNode;
 }) {
   return (
-    <div className="flex gap-4 overflow-x-scroll">
+    <div className="flex gap-4 overflow-x-scroll scrollbar-thin">
       {children}
     </div>
   );
@@ -28,20 +19,26 @@ export function Note({
   title,
   linkUrl,
   linkName,
+  status,
 }: {
   title: string;
   linkUrl: string;
   linkName: string;
+  status: string;
 }) {
   return (
-    <div className="border-2 border-platinum border-solid p-2 w-fit rounded-[8px] shrink-0">
-      <h3 className="font-medium text-md">
+    <div className="font-geist border-2 border-platinum border-solid p-2 w-fit rounded-[8px] shrink-0 basis-[275px]">
+      <p className="text-sm mb-2">
         {title}
-      </h3>
+      </p>
 
-      <Link url={linkUrl} target="_blank">
-        {linkName}
-      </Link>
+      <div className="flex justify-between">
+        <Link url={linkUrl} target="_blank">
+          {linkName}
+        </Link>
+
+        <Status>{status}</Status>
+      </div>
     </div>
   );
 }

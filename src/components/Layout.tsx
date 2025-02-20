@@ -5,7 +5,13 @@ import { FlexWrapper } from "@/components/FlexWrapper";
 
 export function Layout() {
   return (
-    <FlexWrapper mode="dev" color="blue">
+    <FlexWrapper
+      mode="dev"
+      color="border-blue-500"
+      direction="flex-col"
+      gap="2"
+      padding
+    >
       <header>
         <Link href="/">back home</Link>
       </header>

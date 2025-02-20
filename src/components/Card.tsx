@@ -38,7 +38,7 @@ export function Card({
 }
 
 export function Status({
-  children
+  children,
 }: {
   children: ReactNode;
 }) {
@@ -78,7 +78,7 @@ export function CardText({
 }) {
   return (
     <div>
-      <Link demoUrl={demoUrl}>{demoName}</Link>
+      <Link url={demoUrl}>{demoName}</Link>
       <p>{children}</p>
     </div>
   );
