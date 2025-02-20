@@ -1,7 +1,8 @@
+import { ScrollVelocity } from "@component/reactbits/ScrollVelocity";
+
 import { FlexWrapper } from "@component/FlexWrapper";
 import { Empty } from "@component/Empty";
 
-import { Link } from "@component/Link";
 import { Title } from "@component/Title";
 import { Paragraph } from "@component/Paragraph";
 
@@ -32,6 +33,8 @@ export function Home() {
   const isDataTodo: boolean = true;
   const isDataWorking: boolean = true;
 
+  const velocity: number = 10;
+
   return (
     <FlexWrapper
       mode="dev"
@@ -42,7 +45,7 @@ export function Home() {
     >
       <div>
         <Title type="h1">
-          Demos.
+          the-tailwindcss
         </Title>
 
         <Paragraph>
@@ -87,6 +90,18 @@ export function Home() {
           )}
         </Notes>
       </FlexWrapper>
+
+      <div className="mb-4"></div>
+
+      <div className="bg-blue-500 text-white ">
+        <ScrollVelocity
+          texts={["nice", "demos"]}
+          velocity={velocity}
+          className="custom-scroll-text font-geist"
+        />
+      </div>
+
+      <div className="mb-4"></div>
 
       <Title type="h2">Done.</Title>
 
