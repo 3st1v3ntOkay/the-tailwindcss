@@ -39,10 +39,10 @@ export function InstagramStory() {
       >
         <Notes>
           <Note
-            title="input type file"
-            linkName="mdn web docs"
-            linkUrl="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file"
-            status="docs"
+            note="input type file"
+            pageName="mdn web docs"
+            pageUrl="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file"
+            type="docs"
           />
         </Notes>
       </FlexWrapper>
