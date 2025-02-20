@@ -24,7 +24,7 @@ export function InstagramStory() {
 
   return (
     <FlexWrapper
-      mode="dev"
+      mode="prod"
       color="border-blue-500"
       direction="flex-col"
       gap="2"
@@ -39,9 +39,10 @@ export function InstagramStory() {
       >
         <Notes>
           <Note
-            title={`<input type=" file">`}
-            linkName="mdn docs"
+            title="input type file"
+            linkName="mdn web docs"
             linkUrl="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file"
+            status="docs"
           />
         </Notes>
       </FlexWrapper>

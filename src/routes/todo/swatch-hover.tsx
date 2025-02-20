@@ -14,7 +14,7 @@ export function SwatchHover() {
       gap="2"
       padding
     >
-      <FlexWrapper
+      {/* <FlexWrapper
         mode="dev"
         color="border-blue-500"
         direction="flex-col"
@@ -22,17 +22,15 @@ export function SwatchHover() {
         padding
       >
         <Notes>
-          {...Array(8).fill(0).map((_value, index) => (
-            <Note
-              key={index}
-              title="author"
-              linkUrl="https://codepen.io/jh3y/pen/mybQbMW?editors=0110"
-              linkName="Swatch Hover w/ CSS + GSAP"
-              status="research"
-            />
-          ))}
+          <Note
+            key={index}
+            title="author"
+            linkUrl="https://codepen.io/jh3y/pen/mybQbMW?editors=0110"
+            linkName="Swatch Hover w/ CSS + GSAP"
+            status="research"
+          />
         </Notes>
-      </FlexWrapper>
+      </FlexWrapper> */}
 
       <div className="container bg-night">
         <h3>greys.</h3>

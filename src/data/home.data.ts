@@ -56,3 +56,41 @@ export const dataWorking: TData[] = [
     pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores, fugiat iure quia vero dolor similique eveniet illum, expedita quam ad, excepturi quidem laudantium.",
   },
 ];
+
+export const dataNotes = [
+  {
+    id: 1,
+    note: "Try to reply this website",
+    pageUrl: "https://nextjs.org/conf",
+    pageName: "Nextjs Config 24",
+    type: "website",
+  },
+  {
+    id: 2,
+    note: "Try to reply this website",
+    pageUrl: "https://zed.dev/",
+    pageName: "Zed IDE",
+    type: "website",
+  },
+  {
+    id: 3,
+    note: "Investigar window.location.href",
+    pageUrl: "https://developer.mozilla.org/en-US/docs/Web/API/Location/href",
+    pageName: "mdn web docs",
+    type: "docs",
+  },
+  {
+    id: 4,
+    note: "React Router v6 docs",
+    pageUrl: "https://reactrouter.com/start/framework/routing#routing",
+    pageName: "mdn web docs",
+    type: "docs",
+  },
+  {
+    id: 5,
+    note: "React Router v5 docs",
+    pageUrl: "https://v5.reactrouter.com/web/guides/quick-start",
+    pageName: "mdn web docs",
+    type: "docs",
+  },
+];

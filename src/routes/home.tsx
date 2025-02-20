@@ -12,6 +12,7 @@ import {
 
 import {
   dataDone,
+  dataNotes,
   dataTodo,
   dataWorking,
 } from "@data/home.data";
@@ -19,18 +20,14 @@ import {
 import {
   CardAvatar,
   Card,
-  CardImage,
   CardText,
-  IconNumbered,
   Mansory,
   Status,
 } from "@component/Card";
 
-import Heart from "@asset/instagram/icons/heart.svg";
-import RandomImage from "@asset/parachutes_alt_cover.jpg";
-
-
 export function Home() {
+  const isDataNotes: boolean = true;
+
   const isDataDone: boolean = false;
   const isDataTodo: boolean = true;
   const isDataWorking: boolean = true;
@@ -61,19 +58,33 @@ export function Home() {
         padding={false}
       >
         <Notes>
-          <Note
-            title="Try to reply this website"
-            linkName="Nextjs Config 24"
-            linkUrl="https://nextjs.org/conf"
-            status="website"
-          />
+          {isDataNotes ? dataNotes.map(({
+            id,
+            note,
+            pageUrl,
+            pageName,
+            type,
+          }) => (
+            <Note
+              key={id}
+              note={note}
+              pageUrl={pageUrl}
+              pageName={pageName}
+              type={type}
+            />
+          )) : (
+            <FlexWrapper
+              mode="prod"
+              direction="flex-row"
+              gap="justify-between"
+              color="border-blue-500"
+              padding={false}
+            >
+              <Empty />
 
-          <Note
-            title="Try to reply this website"
-            linkName="Zed IDE"
-            linkUrl="https://zed.dev/"
-            status="website"
-          />
+              <Status>unavailable</Status>
+            </FlexWrapper>
+          )}
         </Notes>
       </FlexWrapper>
 

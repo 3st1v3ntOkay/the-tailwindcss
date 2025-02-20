@@ -16,28 +16,28 @@ export function Notes({
 }
 
 export function Note({
-  title,
-  linkUrl,
-  linkName,
-  status,
+  note,
+  pageUrl,
+  pageName,
+  type,
 }: {
-  title: string;
-  linkUrl: string;
-  linkName: string;
-  status: string;
+  note: string;
+  pageUrl: string;
+  pageName: string;
+  type: string;
 }) {
   return (
     <div className="font-geist border-2 border-platinum border-solid p-2 w-fit rounded-[8px] shrink-0 basis-[275px]">
       <p className="text-sm mb-2">
-        {title}
+        {note}
       </p>
 
       <div className="flex justify-between">
-        <Link url={linkUrl} target="_blank">
-          {linkName}
+        <Link url={pageUrl} target="_blank">
+          {pageName}
         </Link>
 
-        <Status>{status}</Status>
+        <Status>{type}</Status>
       </div>
     </div>
   );
