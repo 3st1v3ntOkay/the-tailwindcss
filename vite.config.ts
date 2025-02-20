@@ -13,6 +13,10 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": resolve(__dirname, "./src"),
+      "@component": resolve(__dirname, "./src/components"),
+      "@route": resolve(__dirname, "./src/routes"),
+      "@asset": resolve(__dirname, "./src/assets"),
+      "@data": resolve(__dirname, "./src/data"),
     },
   },
 });

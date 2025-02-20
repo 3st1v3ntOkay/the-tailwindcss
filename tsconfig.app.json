@@ -25,6 +25,18 @@
       "@/*": [
         "./src/*",
       ],
+      "@component/*": [
+        "./src/components/*",
+      ],
+      "@route/*": [
+        "./src/routes/*",
+      ],
+      "@asset/*": [
+        "./src/assets/*",
+      ],
+      "@data/*": [
+        "./src/data/*",
+      ],
     },
   },
   "include": [
