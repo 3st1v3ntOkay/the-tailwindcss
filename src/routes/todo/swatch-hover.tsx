@@ -1,7 +1,6 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 
 import {
-  NotesDescription,
   Notes,
   Note,
 } from "@component/Notes";
@@ -22,19 +21,13 @@ export function SwatchHover() {
         gap="2"
         padding
       >
-        <NotesDescription>
-          note description
-        </NotesDescription>
-
         <Notes>
-          {...Array(8).fill(0).map((_value, index) => (
-            <Note
-              key={index}
-              title="author"
-              linkUrl="https://codepen.io/jh3y/pen/mybQbMW?editors=0110"
-              linkName="Swatch Hover w/ CSS + GSAP"
-            />
-          ))}
+          <Note
+            note="author"
+            pageUrl="https://codepen.io/jh3y/pen/mybQbMW?editors=0110"
+            pageName="Swatch Hover w/ CSS + GSAP"
+            type="research"
+          />
         </Notes>
       </FlexWrapper>
 

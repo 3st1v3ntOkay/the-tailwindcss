@@ -1,18 +1,19 @@
+import { ScrollVelocity } from "@component/reactbits/ScrollVelocity";
+
 import { FlexWrapper } from "@component/FlexWrapper";
 import { Empty } from "@component/Empty";
 
-import { Link } from "@component/Link";
 import { Title } from "@component/Title";
 import { Paragraph } from "@component/Paragraph";
 
 import {
-  NotesDescription,
   Notes,
   Note,
 } from "@component/Notes";
 
 import {
   dataDone,
+  dataNotes,
   dataTodo,
   dataWorking,
 } from "@data/home.data";
@@ -20,21 +21,19 @@ import {
 import {
   CardAvatar,
   Card,
-  CardImage,
   CardText,
-  IconNumbered,
   Mansory,
   Status,
 } from "@component/Card";
 
-import Heart from "@asset/instagram/icons/heart.svg";
-import RandomImage from "@asset/parachutes_alt_cover.jpg";
-import RandomAvatar from "@asset/estebannn.jpg";
-
 export function Home() {
-  const isDataDone: boolean = false;
+  const isDataNotes: boolean = true;
+
+  const isDataDone: boolean = true;
   const isDataTodo: boolean = true;
   const isDataWorking: boolean = true;
+
+  const velocity: number = 10;
 
   return (
     <FlexWrapper
@@ -46,7 +45,7 @@ export function Home() {
     >
       <div>
         <Title type="h1">
-          Demos.
+          the-tailwindcss
         </Title>
 
         <Paragraph>
@@ -59,153 +58,218 @@ export function Home() {
         color="border-blue-500"
         direction="flex-col"
         gap="2"
-        padding
+        padding={false}
       >
-        <NotesDescription>
-          note description
-        </NotesDescription>
-
         <Notes>
-          <Note
-            title="Idea 1: revisar pagina de Nextjs Config 24"
-            linkName="Nextjs Config 24"
-            linkUrl="https://nextjs.org/conf"
-          />
+          {isDataNotes ? dataNotes.map(({
+            id,
+            note,
+            pageUrl,
+            pageName,
+            type,
+          }) => (
+            <Note
+              key={id}
+              note={note}
+              pageUrl={pageUrl}
+              pageName={pageName}
+              type={type}
+            />
+          )) : (
+            <FlexWrapper
+              mode="prod"
+              direction="flex-row"
+              gap="justify-between"
+              color="border-blue-500"
+              padding={false}
+            >
+              <Empty />
 
-          <Note
-            title="Idea 2: revisar pagina de Zed IDE"
-            linkName="Zed IDE"
-            linkUrl="https://zed.dev/"
-          />
+              <Status>unavailable</Status>
+            </FlexWrapper>
+          )}
         </Notes>
       </FlexWrapper>
 
-      <Mansory color="border-red-500" mode="dev">
-        <Card color="border-orange-500" mode="prod">
-          <FlexWrapper
-            mode="dev"
-            direction="flex-row"
-            gap="justify-between"
-            color="border-blue-500"
-            padding={false}
-          >
-            <CardAvatar
-              image={RandomAvatar}
-              imageAlt="random image"
-            />
+      <div className="mb-4"></div>
 
-            <Status>working progress...</Status>
-          </FlexWrapper>
+      {/* <div className="bg-blue-500 text-white ">
+        <ScrollVelocity
+          texts={["nice", "demos"]}
+          velocity={velocity}
+          className="custom-scroll-text font-geist"
+        />
+      </div>
 
-          <FlexWrapper
-            mode="dev"
-            color="border-blue-500"
-            direction="flex-col"
-            gap="0"
-            padding={false}
-          >
-            <CardText demoName="example 1" demoUrl="#">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis quisquam quasi! Quasi temporibus nemo possimus rerum aperiam deleniti recusandae culpa ratione, explicabo nostrum dolore iste debitis, enim, corrupti non.
-            </CardText>
+      <div className="mb-4"></div> */}
 
-            <CardImage
-              image={RandomImage}
-              imageSize={600}
-              imageAlt="random image"
-            />
-          </FlexWrapper>
+      <Title type="h2">Done.</Title>
 
-          <FlexWrapper
-            mode="dev"
-            color="border-blue-500"
-            direction="flex-row"
-            gap="justify-between"
-            padding={false}
-          >
-            <IconNumbered icon={Heart} iconAlt="heart icon">
-              99
-            </IconNumbered>
-            <IconNumbered icon={Heart} iconAlt="heart icon">
-              99
-            </IconNumbered>
-            <IconNumbered icon={Heart} iconAlt="heart icon">
-              99
-            </IconNumbered>
-          </FlexWrapper>
-        </Card>
-      </Mansory>
-
-      <FlexWrapper
-        mode="dev"
-        color="border-blue-500"
-        direction="flex-col"
-        gap="0"
-        padding
-      >
-        <Title type="h2">
-          Done.
-        </Title>
-
+      <Mansory color="border-blue-500" mode="dev">
         {isDataDone ? dataDone.map(({
           id,
-          name,
-          url,
+          image,
+          status,
+          pageUrl,
+          pageName,
+          pageDescription,
         }) => (
-          <Link key={id} url={url}>
-            {name}
-          </Link>
+          <Card key={id} color="border-orange-500" mode="prod">
+            <FlexWrapper
+              mode="prod"
+              direction="flex-row"
+              gap="justify-between"
+              color="border-blue-500"
+              padding={false}
+            >
+              <CardAvatar
+                image={image}
+                imageAlt="random image"
+              />
+
+              <Status>{status}</Status>
+            </FlexWrapper>
+
+            <FlexWrapper
+              mode="prod"
+              color="border-blue-500"
+              direction="flex-col"
+              gap="0"
+              padding={false}
+            >
+              <CardText demoName={pageName} demoUrl={pageUrl}>
+                {pageDescription}
+              </CardText>
+            </FlexWrapper>
+          </Card>
         )) : (
-          <Empty />
+          <Card color="border-orange-500" mode="prod">
+            <FlexWrapper
+              mode="prod"
+              direction="flex-row"
+              gap="justify-between"
+              color="border-blue-500"
+              padding={false}
+            >
+              <Empty />
+
+              <Status>unavailable</Status>
+            </FlexWrapper>
+          </Card>
         )}
-      </FlexWrapper>
+      </Mansory>
 
-      <FlexWrapper
-        mode="dev"
-        color="border-blue-500"
-        direction="flex-col"
-        gap="0"
-        padding
-      >
-        <Title type="h2">
-          In progress.
-        </Title>
+      <Title type="h2">Working.</Title>
 
-        {isDataTodo ? dataTodo.map(({
-          id,
-          name,
-          url,
-        }) => (
-          <Link key={id} url={url}>
-            {name}
-          </Link>
-        )) : (
-          <Empty />
-        )}
-      </FlexWrapper>
-
-      <FlexWrapper
-        mode="dev"
-        color="border-blue-500"
-        direction="flex-col"
-        gap="0"
-        padding
-      >
-        <Title type="h2">
-          In progress.
-        </Title>
-
+      <Mansory color="border-blue-500" mode="dev">
         {isDataWorking ? dataWorking.map(({
           id,
-          name,
-          url,
+          image,
+          status,
+          pageUrl,
+          pageName,
+          pageDescription,
         }) => (
-          <Link key={id} url={url}>
-            {name}
-          </Link>
+          <Card key={id} color="border-orange-500" mode="prod">
+            <FlexWrapper
+              mode="prod"
+              direction="flex-row"
+              gap="justify-between"
+              color="border-blue-500"
+              padding={false}
+            >
+              <CardAvatar
+                image={image}
+                imageAlt="random image"
+              />
+
+              <Status>{status}</Status>
+            </FlexWrapper>
+
+            <FlexWrapper
+              mode="prod"
+              color="border-blue-500"
+              direction="flex-col"
+              gap="0"
+              padding={false}
+            >
+              <CardText demoName={pageName} demoUrl={pageUrl}>
+                {pageDescription}
+              </CardText>
+            </FlexWrapper>
+          </Card>
         )) : (
-          <Empty />
+          <Card color="border-orange-500" mode="prod">
+            <FlexWrapper
+              mode="prod"
+              direction="flex-row"
+              gap="justify-between"
+              color="border-blue-500"
+              padding={false}
+            >
+              <Empty />
+
+              <Status>unavailable</Status>
+            </FlexWrapper>
+          </Card>
         )}
-      </FlexWrapper>
+      </Mansory>
+
+      <Title type="h2">In progress.</Title>
+
+      <Mansory color="border-blue-500" mode="dev">
+        {isDataTodo ? dataTodo.map(({
+          id,
+          image,
+          status,
+          pageUrl,
+          pageName,
+          pageDescription,
+        }) => (
+          <Card key={id} color="border-orange-500" mode="prod">
+            <FlexWrapper
+              mode="prod"
+              direction="flex-row"
+              gap="justify-between"
+              color="border-blue-500"
+              padding={false}
+            >
+              <CardAvatar
+                image={image}
+                imageAlt="random image"
+              />
+
+              <Status>{status}</Status>
+            </FlexWrapper>
+
+            <FlexWrapper
+              mode="prod"
+              color="border-blue-500"
+              direction="flex-col"
+              gap="0"
+              padding={false}
+            >
+              <CardText demoName={pageName} demoUrl={pageUrl}>
+                {pageDescription}
+              </CardText>
+            </FlexWrapper>
+          </Card>
+        )) : (
+          <Card color="border-orange-500" mode="prod">
+            <FlexWrapper
+              mode="prod"
+              direction="flex-row"
+              gap="justify-between"
+              color="border-blue-500"
+              padding={false}
+            >
+              <Empty />
+
+              <Status>unavailable</Status>
+            </FlexWrapper>
+          </Card>
+        )}
+      </Mansory>
     </FlexWrapper>
   );
 }

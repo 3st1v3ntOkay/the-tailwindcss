@@ -7,7 +7,6 @@ import { Avatar } from "@radix-ui/themes";
 import { FlexWrapper } from "@component/FlexWrapper";
 
 import {
-  NotesDescription,
   Notes,
   Note,
 } from "@/components/Notes";
@@ -25,7 +24,7 @@ export function InstagramStory() {
 
   return (
     <FlexWrapper
-      mode="dev"
+      mode="prod"
       color="border-blue-500"
       direction="flex-col"
       gap="2"
@@ -38,15 +37,12 @@ export function InstagramStory() {
         gap="2"
         padding
       >
-        <NotesDescription>
-          note description
-        </NotesDescription>
-
         <Notes>
           <Note
-            title={`<input type=" file">`}
-            linkName="mdn docs"
-            linkUrl="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file"
+            note="input type file"
+            pageName="mdn web docs"
+            pageUrl="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file"
+            type="docs"
           />
         </Notes>
       </FlexWrapper>

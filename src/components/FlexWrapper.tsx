@@ -23,8 +23,6 @@ export function FlexWrapper({
   const isBetween: string = gap === "justify-between" ? "justify-between items-center" : `gap-${gap}`;
   const isPadding: string = padding === true ? "p-2" : "";
 
-  console.log(`gap-${gap}`)
-
   return (
     <div className={`flex rounded-lg ${isBetween} ${direction} ${isPadding} ${whichMode(mode, color)}`}>
       {children}
