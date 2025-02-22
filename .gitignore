@@ -23,5 +23,16 @@ dist-ssr
 *.sln
 *.sw?
 
-# my owns
-src/assets/
+# ignore files inside assest
+src/assets/google/material-icons/**/*
+src/assets/google/youtube/**/*
+src/assets/google/youtube-music/**/*
+
+src/assets/instagram/icons/**/*
+src/assets/instagram/stories/**/*
+
+src/assets/spotify/brand/**/*
+src/assets/spotify/icons/**/*
+
+src/assets/image-001.jpg
+src/assets/image-002.jpg
