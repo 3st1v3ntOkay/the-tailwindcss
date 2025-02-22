@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # my owns
-src/assets
+src/assets/
