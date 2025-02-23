@@ -16,7 +16,7 @@ import ThreeDots from "@asset/instagram/icons/three-dots.svg";
 import Heart from "@asset/instagram/icons/heart.svg";
 import Reply from "@asset/instagram/icons/reply.svg";
 
-import Story from "@asset/instagram/stories/png/story-001.png";
+import Story from "@asset/instagram/stories/story-005.png";
 
 export function InstagramStory() {
   // investigar como agregar el elementRef en react 19

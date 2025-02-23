@@ -1,9 +1,9 @@
-import myvideo from "@/assets/youtube/videos/venus-war.mp4";
+import randomVideo from "@asset/google/youtube/videos/90s-anime.mp4";
 
 export function Video() {
   return (
     <video controls>
-      <source src={myvideo} type="video/mp4" />
+      <source src={randomVideo} type="video/mp4" />
     </video>
   );
 }
