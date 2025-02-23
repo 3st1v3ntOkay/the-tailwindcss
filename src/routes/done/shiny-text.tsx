@@ -1,7 +1,7 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { ShinyText } from "@component/reactbits/ShinyText";
 
-export function AsciiText() {
+export function ShinyTextPage() {
   return (
     <FlexWrapper
       mode="dev"
@@ -10,12 +10,14 @@ export function AsciiText() {
       gap="2"
       padding
     >
-      <ShinyText
-        text="Just some shiny text!"
-        disabled={false}
-        speed={3}
-        className="custom-class"
-      />
+      <div className="bg-night">
+        <ShinyText
+          text="Just some shiny text!"
+          disabled={false}
+          speed={3}
+          className="custom-class"
+        />
+      </div>
     </FlexWrapper>
   );
 }

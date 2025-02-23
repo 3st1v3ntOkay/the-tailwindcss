@@ -1,7 +1,7 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { TextPressure } from "@component/reactbits/TextPressure";
 
-export function AsciiText() {
+export function TextPressurePage() {
   return (
     <FlexWrapper
       mode="dev"
@@ -10,7 +10,7 @@ export function AsciiText() {
       gap="2"
       padding
     >
-      <div style={{ position: 'relative', height: '300px' }}>
+      <div className="relative h-fit bg-night">
         <TextPressure
           text="Hello!"
           flex={true}

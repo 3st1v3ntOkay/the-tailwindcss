@@ -5,7 +5,7 @@ import {
   Note,
 } from "@component/Notes";
 
-export function SwatchHover() {
+export function SwatchHoverPage() {
   return (
     <FlexWrapper
       mode="dev"

@@ -1,6 +1,6 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 
-export function YouTubeMusic() {
+export function YouTubeMusicPage() {
   return (
     <FlexWrapper
       mode="dev"

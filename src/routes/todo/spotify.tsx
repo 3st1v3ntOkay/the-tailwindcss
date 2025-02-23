@@ -1,6 +1,6 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 
-export function Spotify() {
+export function SpotifyPage() {
   return (
     <FlexWrapper
       mode="dev"

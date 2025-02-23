@@ -2,7 +2,7 @@ import { FlexWrapper } from "@component/FlexWrapper";
 
 import { ASCIIText } from "@/components/reactbits/AsciiText";
 
-export function AsciiText() {
+export function ASCIITextPage() {
   const text: string = "heyy";
 
   return (

@@ -18,7 +18,7 @@ import Reply from "@asset/instagram/icons/reply.svg";
 
 import Story from "@asset/instagram/stories/story-005.png";
 
-export function InstagramStory() {
+export function InstagramStoryPage() {
   // investigar como agregar el elementRef en react 19
   const inputRef = useRef<ElementRef<"input">>(null);
 

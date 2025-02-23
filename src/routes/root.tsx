@@ -10,16 +10,19 @@ import { Layout } from "@component/Layout";
 import { Home } from "@route/home";
 
 /* done */
-import { AsciiText } from "@route/done/ascii-text";
+import { ASCIITextPage } from "@route/done/ascii-text";
+import { ShinyTextPage } from "@route/done/shiny-text";
+import { TextPressurePage } from "@route/done/text-pressure";
+import { FallingTextPage } from "@route/done/falling-text";
 
 /* working */
-import { InstagramStory } from "@route/working/instagram-story";
+import { InstagramStoryPage } from "@route/working/instagram-story";
 
 /* todo */
-import { YouTube } from "@/routes/working/youtube";
-import { YouTubeMusic } from "@route/todo/youtube-music";
-import { Spotify } from "@route/todo/spotify";
-import { SwatchHover } from "@route/todo/swatch-hover";
+import { YouTubePage } from "@/routes/working/youtube";
+import { YouTubeMusicPage } from "@route/todo/youtube-music";
+import { SpotifyPage } from "@route/todo/spotify";
+import { SwatchHoverPage } from "@route/todo/swatch-hover";
 
 export function Root() {
   return (
@@ -29,18 +32,21 @@ export function Root() {
           <Route index element={<Home />} />
 
           <Route path="/done" element={<Layout />}>
-            <Route path="/done/ascii-text" element={<AsciiText />} />
+            <Route path="/done/ascii-text" element={<ASCIITextPage />} />
+            <Route path="/done/shiny-text" element={<ShinyTextPage />} />
+            <Route path="/done/text-pressure" element={<TextPressurePage />} />
+            <Route path="/done/falling-text" element={<FallingTextPage />} />
           </Route>
 
           <Route path="/todo" element={<Layout />}>
-            <Route path="/todo/youtube" element={<YouTube />} />
-            <Route path="/todo/youtube-music" element={<YouTubeMusic />} />
-            <Route path="/todo/spotify" element={<Spotify />} />
-            <Route path="/todo/swatch-hover" element={<SwatchHover />} />
+            <Route path="/todo/youtube" element={<YouTubePage />} />
+            <Route path="/todo/youtube-music" element={<YouTubeMusicPage />} />
+            <Route path="/todo/spotify" element={<SpotifyPage />} />
+            <Route path="/todo/swatch-hover" element={<SwatchHoverPage />} />
           </Route>
 
           <Route path="/working" element={<Layout />}>
-            <Route path="/working/instagram-story" element={<InstagramStory />} />
+            <Route path="/working/instagram-story" element={<InstagramStoryPage />} />
           </Route>
         </Route>
       </Routes>
