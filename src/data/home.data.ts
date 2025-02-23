@@ -1,4 +1,4 @@
-import RandomAvatar from "@asset/estebannn.jpg";
+import RandomAvatar from "@asset/image-001.jpg";
 
 interface TData {
   id: number;
@@ -16,6 +16,30 @@ export const dataDone: TData[] = [
     status: "done",
     pageUrl: "/done/ascii-text",
     pageName: "ascii text",
+    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
+  },
+  {
+    id: 2,
+    image: RandomAvatar,
+    status: "done",
+    pageUrl: "/done/shiny-text",
+    pageName: "shiny text",
+    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
+  },
+  {
+    id: 3,
+    image: RandomAvatar,
+    status: "done",
+    pageUrl: "/done/text-pressure",
+    pageName: "text pressure",
+    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
+  },
+  {
+    id: 4,
+    image: RandomAvatar,
+    status: "done",
+    pageUrl: "/done/falling-text",
+    pageName: "falling text",
     pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
   },
 ];

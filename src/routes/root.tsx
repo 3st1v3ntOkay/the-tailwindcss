@@ -5,7 +5,6 @@ import {
 } from "react-router";
 
 import { Layout } from "@component/Layout";
-import { Empty } from "@component/Empty";
 
 /* default page */
 import { Home } from "@route/home";
@@ -17,7 +16,7 @@ import { AsciiText } from "@route/done/ascii-text";
 import { InstagramStory } from "@route/working/instagram-story";
 
 /* todo */
-import { YouTube } from "@route/todo/youtube";
+import { YouTube } from "@/routes/working/youtube";
 import { YouTubeMusic } from "@route/todo/youtube-music";
 import { Spotify } from "@route/todo/spotify";
 import { SwatchHover } from "@route/todo/swatch-hover";
