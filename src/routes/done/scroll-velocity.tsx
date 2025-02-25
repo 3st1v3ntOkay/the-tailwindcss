@@ -1,7 +1,7 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { ScrollVelocity } from "@component/reactbits/ScrollVelocity";
 
-export function FallingTextPage() {
+export function ScrollVelocityPage() {
   const velocity: number = 50;
 
   return (

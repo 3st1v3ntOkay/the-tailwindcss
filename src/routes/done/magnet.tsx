@@ -1,7 +1,7 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { Magnet } from "@component/reactbits/Magnet";
 
-export function ASCIITextPage() {
+export function MagnetPage() {
   return (
     <FlexWrapper
       mode="dev"

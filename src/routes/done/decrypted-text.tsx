@@ -1,7 +1,7 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { DecryptedText } from "@component/reactbits/DecryptedText";
 
-export function FallingTextPage() {
+export function DecryptedTextPage() {
   return (
     <FlexWrapper
       mode="dev"

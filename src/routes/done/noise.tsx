@@ -1,7 +1,7 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { Noise } from "@component/reactbits/Noise";
 
-export function FallingTextPage() {
+export function NoisePage() {
   return (
     <FlexWrapper
       mode="dev"

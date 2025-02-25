@@ -1,7 +1,7 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { StarBorder } from "@component/reactbits/StarBorder";
 
-export function FallingTextPage() {
+export function StarBorderPage() {
   return (
     <FlexWrapper
       mode="dev"
