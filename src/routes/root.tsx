@@ -17,9 +17,10 @@ import { FallingTextPage } from "@route/done/falling-text";
 
 /* working */
 import { InstagramStoryPage } from "@route/working/instagram-story";
+import { PinterestPage } from "@route/working/pinterest-page";
+import { YouTubePage } from "@/routes/working/youtube";
 
 /* todo */
-import { YouTubePage } from "@/routes/working/youtube";
 import { YouTubeMusicPage } from "@route/todo/youtube-music";
 import { SpotifyPage } from "@route/todo/spotify";
 import { SwatchHoverPage } from "@route/todo/swatch-hover";
@@ -39,7 +40,6 @@ export function Root() {
           </Route>
 
           <Route path="/todo" element={<Layout />}>
-            <Route path="/todo/youtube" element={<YouTubePage />} />
             <Route path="/todo/youtube-music" element={<YouTubeMusicPage />} />
             <Route path="/todo/spotify" element={<SpotifyPage />} />
             <Route path="/todo/swatch-hover" element={<SwatchHoverPage />} />
@@ -47,6 +47,8 @@ export function Root() {
 
           <Route path="/working" element={<Layout />}>
             <Route path="/working/instagram-story" element={<InstagramStoryPage />} />
+            <Route path="/working/pinterest-page" element={<PinterestPage />} />
+            <Route path="/working/youtube" element={<YouTubePage />} />
           </Route>
         </Route>
       </Routes>

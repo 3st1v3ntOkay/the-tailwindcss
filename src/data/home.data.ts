@@ -46,14 +46,6 @@ export const dataDone: TData[] = [
 
 export const dataTodo: TData[] = [
   {
-    id: 1,
-    image: RandomAvatar,
-    status: "todo",
-    pageUrl: "/todo/youtube",
-    pageName: "youtube video player",
-    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
-  },
-  {
     id: 2,
     image: RandomAvatar,
     status: "todo",
@@ -86,6 +78,22 @@ export const dataWorking: TData[] = [
     status: "working",
     pageUrl: "/working/instagram-story",
     pageName: "instagram story",
+    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
+  },
+  {
+    id: 2,
+    image: RandomAvatar,
+    status: "working",
+    pageUrl: "/working/pinterest-page",
+    pageName: "pinterest page",
+    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
+  },
+  {
+    id: 3,
+    image: RandomAvatar,
+    status: "working",
+    pageUrl: "/working/youtube",
+    pageName: "youtube video player",
     pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
   },
 ];
