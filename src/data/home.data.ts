@@ -69,6 +69,22 @@ export const dataTodo: TData[] = [
     pageName: "swatch hover",
     pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
   },
+  {
+    id: 5,
+    image: RandomAvatar,
+    status: "todo",
+    pageUrl: "/todo/wii-channels",
+    pageName: "wii channels",
+    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
+  },
+  {
+    id: 6,
+    image: RandomAvatar,
+    status: "todo",
+    pageUrl: "/todo/switch-menu",
+    pageName: "switch menu",
+    pageDescription: "Rerum harum consectetur consequuntur labore quod ipsam asperiores",
+  },
 ];
 
 export const dataWorking: TData[] = [

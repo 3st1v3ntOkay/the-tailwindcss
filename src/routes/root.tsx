@@ -24,6 +24,8 @@ import { YouTubePage } from "@/routes/working/youtube";
 import { YouTubeMusicPage } from "@route/todo/youtube-music";
 import { SpotifyPage } from "@route/todo/spotify";
 import { SwatchHoverPage } from "@route/todo/swatch-hover";
+import { WiiChannelsPage } from "@route/todo/wii-channel";
+import { SwitchMenuPage } from "@route/todo/switch-menu";
 
 export function Root() {
   return (
@@ -43,6 +45,8 @@ export function Root() {
             <Route path="/todo/youtube-music" element={<YouTubeMusicPage />} />
             <Route path="/todo/spotify" element={<SpotifyPage />} />
             <Route path="/todo/swatch-hover" element={<SwatchHoverPage />} />
+            <Route path="/todo/wii-channels" element={<WiiChannelsPage />} />
+            <Route path="/todo/switch-menu" element={<SwitchMenuPage />} />
           </Route>
 
           <Route path="/working" element={<Layout />}>
