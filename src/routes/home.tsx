@@ -1,5 +1,3 @@
-import { ScrollVelocity } from "@component/reactbits/ScrollVelocity";
-
 import { FlexWrapper } from "@component/FlexWrapper";
 import { Empty } from "@component/Empty";
 
@@ -12,7 +10,8 @@ import {
 } from "@component/Notes";
 
 import {
-  dataDone,
+  dataDemo,
+  dataEffects,
   dataNotes,
   dataTodo,
   dataWorking,
@@ -29,11 +28,10 @@ import {
 export function Home() {
   const isDataNotes: boolean = true;
 
-  const isDataDone: boolean = true;
+  const isDataDemo: boolean = false;
   const isDataTodo: boolean = true;
   const isDataWorking: boolean = true;
-
-  const velocity: number = 10;
+  const isDataEffects: boolean = true;
 
   return (
     <FlexWrapper
@@ -93,20 +91,10 @@ export function Home() {
 
       <div className="mb-4"></div>
 
-      {/* <div className="bg-blue-500 text-white ">
-        <ScrollVelocity
-          texts={["nice", "demos"]}
-          velocity={velocity}
-          className="custom-scroll-text font-geist"
-        />
-      </div>
-
-      <div className="mb-4"></div> */}
-
-      <Title type="h2">Done.</Title>
+      <Title type="h2">Demos.</Title>
 
       <Mansory color="border-blue-500" mode="dev">
-        {isDataDone ? dataDone.map(({
+        {isDataDemo ? dataDemo.map(({
           id,
           image,
           status,
@@ -158,6 +146,8 @@ export function Home() {
           </Card>
         )}
       </Mansory>
+
+      <div className="mb-4"></div>
 
       <Title type="h2">Working.</Title>
 
@@ -214,6 +204,66 @@ export function Home() {
           </Card>
         )}
       </Mansory>
+
+      <div className="mb-4"></div>
+
+      <Title type="h2">Effects.</Title>
+
+      <Mansory color="border-blue-500" mode="dev">
+        {isDataEffects ? dataEffects.map(({
+          id,
+          image,
+          status,
+          pageUrl,
+          pageName,
+          pageDescription,
+        }) => (
+          <Card key={id} color="border-orange-500" mode="prod">
+            <FlexWrapper
+              mode="prod"
+              direction="flex-row"
+              gap="justify-between"
+              color="border-blue-500"
+              padding={false}
+            >
+              <CardAvatar
+                image={image}
+                imageAlt="random image"
+              />
+
+              <Status>{status}</Status>
+            </FlexWrapper>
+
+            <FlexWrapper
+              mode="prod"
+              color="border-blue-500"
+              direction="flex-col"
+              gap="0"
+              padding={false}
+            >
+              <CardText demoName={pageName} demoUrl={pageUrl}>
+                {pageDescription}
+              </CardText>
+            </FlexWrapper>
+          </Card>
+        )) : (
+          <Card color="border-orange-500" mode="prod">
+            <FlexWrapper
+              mode="prod"
+              direction="flex-row"
+              gap="justify-between"
+              color="border-blue-500"
+              padding={false}
+            >
+              <Empty />
+
+              <Status>unavailable</Status>
+            </FlexWrapper>
+          </Card>
+        )}
+      </Mansory>
+
+      <div className="mb-4"></div>
 
       <Title type="h2">In progress.</Title>
 
