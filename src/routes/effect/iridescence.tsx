@@ -1,7 +1,7 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { Iridescence } from "@component/reactbits/Iridescence";
 
-export function IndescencePage() {
+export function IridescencePage() {
   return (
     <FlexWrapper
       mode="dev"
