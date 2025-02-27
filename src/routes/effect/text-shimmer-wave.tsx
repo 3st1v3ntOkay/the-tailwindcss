@@ -1,4 +1,5 @@
 import { FlexWrapper } from "@component/FlexWrapper";
+import { TextShimmerWave } from "@component/motion-primitives/text-shimmer-wave";
 
 export function TextShimmerWavePage() {
   return (
@@ -9,7 +10,9 @@ export function TextShimmerWavePage() {
       gap="2"
       padding
     >
-      <p className="font-geist">text shimmer wave</p>
+      <TextShimmerWave className='font-mono text-sm' duration={1}>
+        Generating code...
+      </TextShimmerWave>
     </FlexWrapper>
   );
 }
