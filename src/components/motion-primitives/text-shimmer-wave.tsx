@@ -1,7 +1,7 @@
 "use client";
 
 import { type JSX } from "react";
-import { motion, Transition } from "framer-motion";
+import { motion, Transition } from "motion/react";
 import { cn } from "@component/utils/tailwindcss-class-manager";
 
 export type TextShimmerWaveProps = {

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 interface TextPressureProps {
   text?: string;
@@ -19,9 +19,9 @@ interface TextPressureProps {
 }
 
 export const TextPressure: React.FC<TextPressureProps> = ({
-  text = 'Compressa',
-  fontFamily = 'Compressa VF',
-  fontUrl = 'https://res.cloudinary.com/dr6lvwubh/raw/upload/v1529908256/CompressaPRO-GX.woff2',
+  text = "Compressa",
+  fontFamily = "Compressa VF",
+  fontUrl = "https://res.cloudinary.com/dr6lvwubh/raw/upload/v1529908256/CompressaPRO-GX.woff2",
   width = true,
   weight = true,
   italic = true,
@@ -29,10 +29,10 @@ export const TextPressure: React.FC<TextPressureProps> = ({
   flex = true,
   stroke = false,
   scale = false,
-  textColor = '#FFFFFF',
-  strokeColor = '#FF0000',
+  textColor = "#FFFFFF",
+  strokeColor = "#FF0000",
   strokeWidth = 2,
-  className = '',
+  className = "",
   minFontSize = 24,
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -46,7 +46,7 @@ export const TextPressure: React.FC<TextPressureProps> = ({
   const [scaleY, setScaleY] = useState(1);
   const [lineHeight, setLineHeight] = useState(1);
 
-  const chars = text.split('');
+  const chars = text.split("");
 
   const dist = (a: { x: number; y: number }, b: { x: number; y: number }) => {
     const dx = b.x - a.x;
@@ -65,8 +65,8 @@ export const TextPressure: React.FC<TextPressureProps> = ({
       cursorRef.current.y = t.clientY;
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('touchmove', handleTouchMove, { passive: false });
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove, { passive: false });
 
     if (containerRef.current) {
       const { left, top, width, height } = containerRef.current.getBoundingClientRect();
@@ -77,8 +77,8 @@ export const TextPressure: React.FC<TextPressureProps> = ({
     }
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
     };
   }, []);
 
@@ -108,8 +108,8 @@ export const TextPressure: React.FC<TextPressureProps> = ({
 
   useEffect(() => {
     setSize();
-    window.addEventListener('resize', setSize);
-    return () => window.removeEventListener('resize', setSize);
+    window.addEventListener("resize", setSize);
+    return () => window.removeEventListener("resize", setSize);
   }, [scale, text]);
 
   useEffect(() => {
@@ -140,11 +140,11 @@ export const TextPressure: React.FC<TextPressureProps> = ({
 
           const wdth = width ? Math.floor(getAttr(d, 5, 200)) : 100;
           const wght = weight ? Math.floor(getAttr(d, 100, 900)) : 400;
-          const italVal = italic ? getAttr(d, 0, 1).toFixed(2) : '0';
-          const alphaVal = alpha ? getAttr(d, 0, 1).toFixed(2) : '1';
+          const italVal = italic ? getAttr(d, 0, 1).toFixed(2) : "0";
+          const alphaVal = alpha ? getAttr(d, 0, 1).toFixed(2) : "1";
 
           span.style.opacity = alphaVal;
-          span.style.fontVariationSettings = `'wght' ${wght}, 'wdth' ${wdth}, 'ital' ${italVal}`;
+          span.style.fontVariationSettings = `"wght" ${wght}, "wdth" ${wdth}, "ital" ${italVal}`;
         });
       }
 
@@ -162,8 +162,8 @@ export const TextPressure: React.FC<TextPressureProps> = ({
     >
       <style>{`
         @font-face {
-          font-family: '${fontFamily}';
-          src: url('${fontUrl}');
+          font-family: "${fontFamily}";
+          src: url("${fontUrl}");
           font-style: normal;
         }
         .stroke span {
@@ -184,14 +184,14 @@ export const TextPressure: React.FC<TextPressureProps> = ({
 
       <h1
         ref={titleRef}
-        className={`text-pressure-title ${className} ${flex ? 'flex justify-between' : ''
-          } ${stroke ? 'stroke' : ''} uppercase text-center`}
+        className={`text-pressure-title ${className} ${flex ? "flex justify-between" : ""
+          } ${stroke ? "stroke" : ""} uppercase text-center`}
         style={{
           fontFamily,
           fontSize: fontSize,
           lineHeight,
           transform: `scale(1, ${scaleY})`,
-          transformOrigin: 'center top',
+          transformOrigin: "center top",
           margin: 0,
           fontWeight: 100,
           color: stroke ? undefined : textColor,

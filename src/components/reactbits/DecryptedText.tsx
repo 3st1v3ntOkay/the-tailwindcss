@@ -1,18 +1,18 @@
-import { useEffect, useState, useRef } from 'react'
-import { motion } from 'framer-motion'
+import { useEffect, useState, useRef } from "react";
+import { motion } from "motion/react";
 
 interface DecryptedTextProps {
   text: string
   speed?: number
   maxIterations?: number
   sequential?: boolean
-  revealDirection?: 'start' | 'end' | 'center'
+  revealDirection?: "start" | "end" | "center"
   useOriginalCharsOnly?: boolean
   characters?: string
   className?: string
   encryptedClassName?: string
   parentClassName?: string
-  animateOn?: 'view' | 'hover'
+  animateOn?: "view" | "hover"
   [key: string]: any
 }
 
@@ -21,13 +21,13 @@ export function DecryptedText({
   speed = 50,
   maxIterations = 10,
   sequential = false,
-  revealDirection = 'start',
+  revealDirection = "start",
   useOriginalCharsOnly = false,
-  characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+',
-  className = '',
-  parentClassName = '',
-  encryptedClassName = '',
-  animateOn = 'hover',
+  characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+",
+  className = "",
+  parentClassName = "",
+  encryptedClassName = "",
+  animateOn = "hover",
   ...props
 }: DecryptedTextProps) {
   const [displayText, setDisplayText] = useState<string>(text)
@@ -44,11 +44,11 @@ export function DecryptedText({
     const getNextIndex = (revealedSet: Set<number>): number => {
       const textLength = text.length
       switch (revealDirection) {
-        case 'start':
+        case "start":
           return revealedSet.size
-        case 'end':
+        case "end":
           return textLength - 1 - revealedSet.size
-        case 'center': {
+        case "center": {
           const middle = Math.floor(textLength / 2)
           const offset = Math.floor(revealedSet.size / 2)
           const nextIndex =
@@ -70,14 +70,14 @@ export function DecryptedText({
     }
 
     const availableChars = useOriginalCharsOnly
-      ? Array.from(new Set(text.split(''))).filter((char) => char !== ' ')
-      : characters.split('')
+      ? Array.from(new Set(text.split(""))).filter((char) => char !== " ")
+      : characters.split("")
 
     const shuffleText = (originalText: string, currentRevealed: Set<number>): string => {
       if (useOriginalCharsOnly) {
-        const positions = originalText.split('').map((char, i) => ({
+        const positions = originalText.split("").map((char, i) => ({
           char,
-          isSpace: char === ' ',
+          isSpace: char === " ",
           index: i,
           isRevealed: currentRevealed.has(i),
         }))
@@ -94,20 +94,20 @@ export function DecryptedText({
         let charIndex = 0
         return positions
           .map((p) => {
-            if (p.isSpace) return ' '
+            if (p.isSpace) return " "
             if (p.isRevealed) return originalText[p.index]
             return nonSpaceChars[charIndex++]
           })
-          .join('')
+          .join("")
       } else {
         return originalText
-          .split('')
+          .split("")
           .map((char, i) => {
-            if (char === ' ') return ' '
+            if (char === " ") return " "
             if (currentRevealed.has(i)) return originalText[i]
             return availableChars[Math.floor(Math.random() * availableChars.length)]
           })
-          .join('')
+          .join("")
       }
     }
 
@@ -160,7 +160,7 @@ export function DecryptedText({
   ])
 
   useEffect(() => {
-    if (animateOn !== 'view') return
+    if (animateOn !== "view") return
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
@@ -173,7 +173,7 @@ export function DecryptedText({
 
     const observerOptions = {
       root: null,
-      rootMargin: '0px',
+      rootMargin: "0px",
       threshold: 0.1,
     }
 
@@ -189,7 +189,7 @@ export function DecryptedText({
   }, [animateOn, hasAnimated])
 
   const hoverProps =
-    animateOn === 'hover'
+    animateOn === "hover"
       ? {
         onMouseEnter: () => setIsHovering(true),
         onMouseLeave: () => setIsHovering(false),
@@ -206,7 +206,7 @@ export function DecryptedText({
       <span className="sr-only">{displayText}</span>
 
       <span aria-hidden="true">
-        {displayText.split('').map((char, index) => {
+        {displayText.split("").map((char, index) => {
           const isRevealedOrDone =
             revealedIndices.has(index) || !isScrambling || !isHovering
 
