@@ -43,6 +43,9 @@ import { ScrollVelocityPage } from "@route/effect/scroll-velocity";
 import { StarBorderPage } from "@route/effect/star-border";
 import { StepperPage } from "@route/effect/stepper";
 
+import { SlidingNumberPage } from "@route/effect/sliding-number";
+import { TextShimmerWavePage } from "@route/effect/text-shimmer-wave";
+
 export function Root() {
   return (
     <BrowserRouter>
@@ -73,6 +76,9 @@ export function Root() {
             <Route path="/effect/star-border" element={<StarBorderPage />} />
             <Route path="/effect/stepper" element={<StepperPage />} />
             <Route path="/effect/text-pressure" element={<TextPressurePage />} />
+
+            <Route path="/effect/sliding-number" element={<SlidingNumberPage />} />
+            <Route path="/effect/text-shimmer-wave" element={<TextShimmerWavePage />} />
           </Route>
 
           <Route path="/todo" element={<Layout />}>

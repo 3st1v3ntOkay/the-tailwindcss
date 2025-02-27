@@ -10,20 +10,18 @@ import {
 } from "@component/Notes";
 
 import {
-  dataDemo,
-  dataEffects,
-  dataNotes,
-  dataTodo,
-  dataWorking,
-} from "@data/home.data";
-
-import {
   CardAvatar,
   Card,
   CardText,
   Mansory,
   Status,
 } from "@component/Card";
+
+import { dataEffects } from "@data/effects.data";
+import { dataNotes } from "@data/notes.data";
+import { dataDemo } from "@data/demo.data";
+import { dataWorking } from "@data/working.data";
+import { dataTodo } from "@data/todo.data";
 
 export function Home() {
   const isDataNotes: boolean = true;
