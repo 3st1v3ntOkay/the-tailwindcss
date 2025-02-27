@@ -160,7 +160,7 @@ export const dataEffects: TData[] = [
     id: 19,
     image: RandomAvatar,
     status: "effect",
-    pageUrl: "/effect/slidering-number",
+    pageUrl: "/effect/sliding-number",
     pageName: "slidering number",
     pageDescription: sampleDescription,
   },
