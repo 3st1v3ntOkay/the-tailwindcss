@@ -1,3 +1,5 @@
+import { Links } from "react-router";
+
 import { FlexWrapper } from "@component/FlexWrapper";
 import { Empty } from "@component/Empty";
 
@@ -18,13 +20,25 @@ import {
 } from "@component/Card";
 
 import { dataEffects } from "@data/effects.data";
-import { dataNotes } from "@data/notes.data";
+import {
+  dataNotesDocs,
+  dataNotesRebuild,
+  dataNotesTools,
+} from "@data/notes.data";
 import { dataDemo } from "@data/demo.data";
 import { dataWorking } from "@data/working.data";
 import { dataTodo } from "@data/todo.data";
 
+function Divider() {
+  return (
+    <div className="mb-4"></div>
+  );
+}
+
 export function Home() {
-  const isDataNotes: boolean = true;
+  const isDataNotesDocs: boolean = true;
+  const isDataNotesRebuild: boolean = true;
+  const isDataNotesTools: boolean = true;
 
   const isDataDemo: boolean = false;
   const isDataTodo: boolean = true;
@@ -49,6 +63,14 @@ export function Home() {
         </Paragraph>
       </div>
 
+      <Divider />
+
+      {/* <Links /> */}
+
+      <Paragraph>
+        Documentacion util
+      </Paragraph>
+
       <FlexWrapper
         mode="dev"
         color="border-blue-500"
@@ -57,7 +79,7 @@ export function Home() {
         padding={false}
       >
         <Notes>
-          {isDataNotes ? dataNotes.map(({
+          {isDataNotesDocs ? dataNotesDocs.map(({
             id,
             note,
             pageUrl,
@@ -87,7 +109,95 @@ export function Home() {
         </Notes>
       </FlexWrapper>
 
-      <div className="mb-4"></div>
+      <Divider />
+
+      <Paragraph>
+        Paginas o ejemplos a reconstruir
+      </Paragraph>
+
+      <FlexWrapper
+        mode="dev"
+        color="border-blue-500"
+        direction="flex-col"
+        gap="2"
+        padding={false}
+      >
+        <Notes>
+          {isDataNotesRebuild ? dataNotesRebuild.map(({
+            id,
+            note,
+            pageUrl,
+            pageName,
+            type,
+          }) => (
+            <Note
+              key={id}
+              note={note}
+              pageUrl={pageUrl}
+              pageName={pageName}
+              type={type}
+            />
+          )) : (
+            <FlexWrapper
+              mode="prod"
+              direction="flex-row"
+              gap="justify-between"
+              color="border-blue-500"
+              padding={false}
+            >
+              <Empty />
+
+              <Status>unavailable</Status>
+            </FlexWrapper>
+          )}
+        </Notes>
+      </FlexWrapper>
+
+      <Divider />
+
+      <Paragraph>
+        Herramientas para probar
+      </Paragraph>
+
+      <FlexWrapper
+        mode="dev"
+        color="border-blue-500"
+        direction="flex-col"
+        gap="2"
+        padding={false}
+      >
+        <Notes>
+          {isDataNotesTools ? dataNotesTools.map(({
+            id,
+            note,
+            pageUrl,
+            pageName,
+            type,
+          }) => (
+            <Note
+              key={id}
+              note={note}
+              pageUrl={pageUrl}
+              pageName={pageName}
+              type={type}
+            />
+          )) : (
+            <FlexWrapper
+              mode="prod"
+              direction="flex-row"
+              gap="justify-between"
+              color="border-blue-500"
+              padding={false}
+            >
+              <Empty />
+
+              <Status>unavailable</Status>
+            </FlexWrapper>
+          )}
+        </Notes>
+      </FlexWrapper>
+
+      <Divider />
 
       <Title type="h2">Demos.</Title>
 
@@ -145,7 +255,7 @@ export function Home() {
         )}
       </Mansory>
 
-      <div className="mb-4"></div>
+      <Divider />
 
       <Title type="h2">Working.</Title>
 
@@ -203,7 +313,7 @@ export function Home() {
         )}
       </Mansory>
 
-      <div className="mb-4"></div>
+      <Divider />
 
       <Title type="h2">Effects.</Title>
 
@@ -261,7 +371,7 @@ export function Home() {
         )}
       </Mansory>
 
-      <div className="mb-4"></div>
+      <Divider />
 
       <Title type="h2">In progress.</Title>
 

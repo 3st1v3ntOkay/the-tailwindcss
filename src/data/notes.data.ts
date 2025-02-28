@@ -6,7 +6,7 @@ interface TData {
   type: string;
 }
 
-export const dataNotes: TData[] = [
+export const dataNotesRebuild: TData[] = [
   {
     id: 1,
     note: "Try to reply this website",
@@ -21,27 +21,9 @@ export const dataNotes: TData[] = [
     pageName: "Zed IDE",
     type: "website",
   },
-  {
-    id: 3,
-    note: "Investigar window.location.href",
-    pageUrl: "https://developer.mozilla.org/en-US/docs/Web/API/Location/href",
-    pageName: "mdn web docs",
-    type: "docs",
-  },
-  {
-    id: 4,
-    note: "React Router v6 docs",
-    pageUrl: "https://reactrouter.com/start/framework/routing#routing",
-    pageName: "mdn web docs",
-    type: "docs",
-  },
-  {
-    id: 5,
-    note: "React Router v5 docs",
-    pageUrl: "https://v5.reactrouter.com/web/guides/quick-start",
-    pageName: "mdn web docs",
-    type: "docs",
-  },
+];
+
+export const dataNotesTools: TData[] = [
   {
     id: 6,
     note: "Zustand",
@@ -76,5 +58,71 @@ export const dataNotes: TData[] = [
     pageUrl: "https://jotai.org/",
     pageName: "jotai docs",
     type: "docs",
+  },
+];
+
+export const dataNotesDocs: TData[] = [
+  {
+    id: 3,
+    note: "Investigar window.location.href",
+    pageUrl: "https://developer.mozilla.org/en-US/docs/Web/API/Location/href",
+    pageName: "mdn web docs",
+    type: "docs",
+  },
+  {
+    id: 4,
+    note: "React Router v6 docs",
+    pageUrl: "https://reactrouter.com/how-to/client-data",
+    pageName: "react router docs",
+    type: "docs",
+  },
+  {
+    id: 5,
+    note: "React Router v5 docs",
+    pageUrl: "https://v5.reactrouter.com/web/guides/quick-start",
+    pageName: "react router docs",
+    type: "docs",
+  },
+  {
+    id: 6,
+    note: "React Router v7: A Comprehensive Guide & Migration from v6",
+    pageUrl: "https://dev.to/utkvishwas/react-router-v7-a-comprehensive-guide-migration-from-v6-7d1",
+    pageName: "dev.to",
+    type: "docs",
+  },
+  {
+    id: 7,
+    note: "How to make your apps ERROR proof with react-router v7",
+    pageUrl: "https://youtu.be/qoBNbHjwKIw",
+    pageName: "youtube",
+    type: "video",
+  },
+  {
+    id: 8,
+    note: "React Router V7 just dropped, here's why you should care",
+    pageUrl: "https://youtu.be/5B1LScZtrb4",
+    pageName: "youtube",
+    type: "video",
+  },
+  {
+    id: 9,
+    note: "Enrutador React V7",
+    pageUrl: "https://youtu.be/h7MTWLv3xvw",
+    pageName: "youtube",
+    type: "video",
+  },
+  {
+    id: 10,
+    note: "React Router 7 Tutorial (framework mode)",
+    pageUrl: "https://youtu.be/pw8FAg07kdo",
+    pageName: "youtube",
+    type: "video",
+  },
+  {
+    id: 11,
+    note: "PROYECTO DE ENRUTADOR REACT + Scrimba",
+    pageUrl: "https://youtu.be/JMn_yIVl8eo",
+    pageName: "youtube",
+    type: "video",
   },
 ];

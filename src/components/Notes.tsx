@@ -27,7 +27,7 @@ export function Note({
   type: string;
 }) {
   return (
-    <div className="font-geist border-2 border-platinum border-solid p-2 w-fit rounded-[8px] shrink-0 basis-[275px]">
+    <div className="font-geist border-2 border-platinum border-solid p-2 w-fit rounded-[8px] shrink-0 basis-[275px] flex flex-col justify-between">
       <p className="text-sm mb-2">
         {note}
       </p>
