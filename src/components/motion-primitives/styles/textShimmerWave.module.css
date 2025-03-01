@@ -1,0 +1,22 @@
+/* MotionComponent component translation from Tailwindcss to CSS */
+.motion-component {
+  --base-color: #a1a1aa;
+  --base-gradient-color: #000;
+
+  position: relative;
+  display: inline-block;
+  perspective: 500px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .motion-component {
+    --base-color: #71717a;
+    --base-gradient-color: #ffffff;
+  }
+}
+
+.motion-component-motion-span {
+  display: inline-block;
+  white-space: pre;
+  transform-style: preserve-3d;
+}

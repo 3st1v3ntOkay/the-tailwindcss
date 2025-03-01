@@ -3,7 +3,13 @@
 import { useEffect, useState } from "react";
 
 import { FlexWrapper } from "@component/FlexWrapper";
-import { SlidingNumber } from "@component/motion-primitives/slidering-number";
+import { Note, Notes } from "@component/Notes";
+import { Empty } from "@component/Empty";
+import { Status } from "@component/Card";
+
+import { SlidingNumber } from "@component/motion-primitives/sliding-number";
+
+import { dataSlidingNumber } from "@data/routes/effect/sliding-number";
 
 export function SlidingNumberPage() {
   const [hours, setHours] = useState(new Date().getHours());
@@ -20,6 +26,8 @@ export function SlidingNumberPage() {
     return () => clearInterval(interval);
   }, []);
 
+  const isThereNotes: boolean = true;
+
   return (
     <FlexWrapper
       mode="dev"
@@ -28,6 +36,44 @@ export function SlidingNumberPage() {
       gap="2"
       padding
     >
+      <FlexWrapper
+        mode="dev"
+        color="border-blue-500"
+        direction="flex-col"
+        gap="2"
+        padding={false}
+      >
+        <Notes>
+          {isThereNotes ? dataSlidingNumber.map(({
+            id,
+            note,
+            pageUrl,
+            pageName,
+            type,
+          }) => (
+            <Note
+              key={id}
+              note={note}
+              pageUrl={pageUrl}
+              pageName={pageName}
+              type={type}
+            />
+          )) : (
+            <FlexWrapper
+              mode="prod"
+              direction="flex-row"
+              gap="justify-between"
+              color="border-blue-500"
+              padding={false}
+            >
+              <Empty />
+
+              <Status>unavailable</Status>
+            </FlexWrapper>
+          )}
+        </Notes>
+      </FlexWrapper>
+
       <div className="flex items-center gap-0.5 font-mono">
         <SlidingNumber value={hours} padStart={true} />
         <span className="text-zinc-500">:</span>

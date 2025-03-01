@@ -8,18 +8,28 @@ import {
   useSpring,
   useTransform,
   motionValue,
+  SpringOptions,
 } from "motion/react";
 
 import useMeasure from "react-use-measure";
 
-const TRANSITION = {
+// todo: check its typescript of this object
+const TRANSITION: SpringOptions & {
+  type: string;
+} = {
   type: "spring",
   stiffness: 280,
   damping: 18,
   mass: 0.3,
 };
 
-function Digit({ value, place }: { value: number; place: number }) {
+function Digit({
+  value,
+  place,
+}: {
+  value: number;
+  place: number
+}) {
   const valueRoundedToPlace = Math.floor(value / place) % 10;
   const initial = motionValue(valueRoundedToPlace);
   const animatedValue = useSpring(initial, TRANSITION);
@@ -38,12 +48,21 @@ function Digit({ value, place }: { value: number; place: number }) {
   );
 }
 
-function Number({ mv, number }: { mv: MotionValue<number>; number: number }) {
+function Number({
+  mv,
+  number,
+}: {
+  mv: MotionValue<number>;
+  number: number;
+}) {
   const uniqueId = useId();
   const [ref, bounds] = useMeasure();
 
   const y = useTransform(mv, (latest) => {
-    if (!bounds.height) return 0;
+    if (!bounds.height) {
+      return 0;
+    }
+
     const placeValue = latest % 10;
     const offset = (10 + number - placeValue) % 10;
     let memo = offset * bounds.height;
@@ -55,7 +74,7 @@ function Number({ mv, number }: { mv: MotionValue<number>; number: number }) {
     return memo;
   });
 
-  // don"t render the animated number until we know the height
+  // don't render the animated number until we know the height
   if (!bounds.height) {
     return (
       <span ref={ref} className="invisible absolute">
@@ -81,7 +100,7 @@ type SlidingNumberProps = {
   value: number;
   padStart?: boolean;
   decimalSeparator?: string;
-};
+}
 
 export function SlidingNumber({
   value,
@@ -101,6 +120,7 @@ export function SlidingNumber({
   return (
     <div className="flex items-center">
       {value < 0 && "-"}
+
       {integerDigits.map((_, index) => (
         <Digit
           key={`pos-${integerPlaces[index]}`}
@@ -108,6 +128,7 @@ export function SlidingNumber({
           place={integerPlaces[index]}
         />
       ))}
+
       {decimalPart && (
         <>
           <span>{decimalSeparator}</span>

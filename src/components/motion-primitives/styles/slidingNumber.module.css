@@ -1,0 +1,56 @@
+/* Digit component translation from Tailwindcss to CSS */
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --tw-ordinal {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --tw-slashed-zero {
+  syntax: "*";
+  inherits: false;
+}
+
+.digit-div-1 {
+  position: relative;
+  display: inline-block;
+  width: 1ch;
+  overflow-x: visible;
+  overflow-y: clip;
+
+  --tw-leading: 1;
+  line-height: 1;
+
+  --tw-numeric-spacing: tabular-nums;
+  font-variant-numeric: var(--tw-ordinal, ) var(--tw-slashed-zero, ) var(--tw-numeric-figure, ) var(--tw-numeric-spacing, ) var(--tw-numeric-fraction, );
+}
+
+.digit-div-2 {
+  visibility: hidden;
+}
+
+/* Number component translation from Tailwindcss to CSS */
+.number-span {
+  visibility: hidden;
+  position: absolute;
+}
+
+.number-motion-span {
+  --spacing: 1rem;
+
+  position: absolute;
+  inset: calc(var(--spacing) * 0);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SlidingNumber component translation from Tailwindcss to CSS */
+.sliding-number {
+  display: flex;
+  align-items: center;
+}
