@@ -5,6 +5,7 @@ import {
 } from "react-router";
 
 import { Layout } from "@component/Layout";
+import { NotFound } from "@component/NotFound";
 
 /* default page */
 import { Home } from "@route/home";
@@ -94,6 +95,8 @@ export function Root() {
             <Route path="/working/pinterest-page" element={<PinterestPage />} />
             <Route path="/working/youtube" element={<YouTubePage />} />
           </Route>
+
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
