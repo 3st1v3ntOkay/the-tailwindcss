@@ -24,7 +24,7 @@ export function FlexWrapper({
   const isPadding: string = padding === true ? "p-2" : "";
 
   return (
-    <div className={`flex rounded-lg ${isBetween} ${direction} ${isPadding} ${whichMode(mode, color)}`}>
+    <div className={`flex rounded-lg selection:bg-[#ffecbd] ${isBetween} ${direction} ${isPadding} ${whichMode(mode, color)}`}>
       {children}
     </div>
   );
