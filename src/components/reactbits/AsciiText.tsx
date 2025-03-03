@@ -1,5 +1,5 @@
-import { useRef, useEffect } from 'react';
-import * as THREE from 'three';
+import { useRef, useEffect } from "react";
+import * as THREE from "three";
 
 const vertexShader = `
 varying vec2 vUv;
@@ -398,7 +398,6 @@ class CanvAscii {
   }
 }
 
-// =========== React component ===========
 export function ASCIIText({
   text = 'David!',
   asciiFontSize = 8,

@@ -1,0 +1,152 @@
+/* ElasticSlider component translation from Tailwindcss to CSS */
+.elastic-slider {
+  --spacing: 0.25rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--spacing) * 4);
+  width: calc(var(--spacing) * 48);
+}
+
+/* Slider component translation from Tailwindcss to CSS */
+.slider-motion-div-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--spacing) * 4);
+
+  width: 100%;
+  touch-action: none;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.slider-div-1 {
+  --container-xs: 20rem;
+  --spacing: 0.25rem;
+
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: var(--container-xs);
+  flex-grow: 1;
+  cursor: grab;
+
+  touch-action: none;
+
+  -webkit-user-select: none;
+  user-select: none;
+  align-items: center;
+
+  padding-block: calc(var(--spacing) * 4)
+}
+
+.slider-motion-div-2 {
+  display: flex;
+  flex-grow: 1;
+}
+
+.slider-div-2 {
+  position: relative;
+  height: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+  border-radius: calc(infinity * 1px);
+  background-color: #99a1af;
+  /* oklch(0.707 0.022 261.325) = #99a1af */
+}
+
+.slider-div-3 {
+  position: absolute;
+  height: 100%;
+  border-radius: calc(infinity * 1px);
+  background-color: #6a7282;
+  /* oklch(0.551 0.027 264.364) = #6a7282 */
+}
+
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateX(0);
+}
+
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateY(0);
+}
+
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateZ(0);
+}
+
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: skewX(0);
+}
+
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: skewY(0);
+}
+
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+
+.slider-p {
+  --spacing: 0.25rem;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: calc(1 / 0.75);
+  --tw-font-weight: 500;
+  --tw-tracking: 0.025em;
+
+  position: absolute;
+  color: var(--color-gray-400);
+  /* oklch(0.707 0.022 261.325) = #99a1af */
+
+  transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+  --tw-translate-y: calc(var(--spacing) * -4);
+  /* -1rem = -16px */
+
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+
+  font-size: var(--text-xs);
+  /* 0.75rem = 12px */
+  line-height: var(--tw-leading, var(--text-xs--line-height));
+  /* calc(1 / 0.75) ≈ 1.3333 */
+
+  letter-spacing: var(--tracking-wide);
+  /* 0.025em */
+}
