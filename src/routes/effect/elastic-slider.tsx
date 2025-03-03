@@ -1,7 +1,11 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { ElasticSlider } from "@component/reactbits/ElasticSlider";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function ElasticSliderPage() {
+  setCreditsTo("reactbits", "https://www.reactbits.dev/components/elastic-slider");
+
   return (
     <FlexWrapper
       mode="dev"
@@ -11,8 +15,8 @@ export function ElasticSliderPage() {
       padding
     >
       <ElasticSlider
-        leftIcon={<>...your icon...</>}
-        rightIcon={<>...your icon...</>}
+        leftIcon={<>left icon</>}
+        rightIcon={<>right icon</>}
         startingValue={500}
         defaultValue={750}
         maxValue={1000}

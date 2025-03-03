@@ -3,6 +3,8 @@ import { useState } from "react";
 import { FlexWrapper } from "@component/FlexWrapper";
 import { Stepper, Step } from "@component/reactbits/Stepper";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function StepperPage() {
   const [name, setName] = useState<string>("");
 

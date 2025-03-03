@@ -1,6 +1,8 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { InfiniteScroll } from "@component/reactbits/InfiniteScroll";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 const items = [
   { content: "Text Item 1" },
   { content: <p>Paragraph Item 2</p> },

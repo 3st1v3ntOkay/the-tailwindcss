@@ -1,6 +1,8 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { InfiniteMenu } from "@component/reactbits/InfiniteMenu";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function InfiniteMenuPage() {
   const items = [
     {

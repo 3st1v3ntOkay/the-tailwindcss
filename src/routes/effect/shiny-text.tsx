@@ -1,6 +1,8 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { ShinyText } from "@component/reactbits/ShinyText";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function ShinyTextPage() {
   return (
     <FlexWrapper

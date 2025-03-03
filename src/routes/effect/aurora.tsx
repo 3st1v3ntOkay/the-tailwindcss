@@ -1,7 +1,11 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { Aurora } from "@component/reactbits/Aurora";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function AuroraPage() {
+  setCreditsTo("reactbits", "https://www.reactbits.dev/backgrounds/aurora");
+
   return (
     <FlexWrapper
       mode="dev"

@@ -2,7 +2,11 @@ import { FlexWrapper } from "@component/FlexWrapper";
 
 import { ASCIIText } from "@/components/reactbits/AsciiText";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function ASCIITextPage() {
+  setCreditsTo("reactbits", "https://www.reactbits.dev/text-animations/ascii-text");
+
   const text: string = "heyy";
 
   return (

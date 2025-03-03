@@ -1,6 +1,8 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { TextShimmerWave } from "@component/motion-primitives/text-shimmer-wave";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function TextShimmerWavePage() {
   return (
     <FlexWrapper

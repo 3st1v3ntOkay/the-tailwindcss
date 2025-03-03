@@ -1,6 +1,8 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { TextPressure } from "@component/reactbits/TextPressure";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function TextPressurePage() {
   return (
     <FlexWrapper

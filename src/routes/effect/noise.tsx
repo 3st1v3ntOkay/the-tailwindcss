@@ -1,6 +1,8 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { Noise } from "@component/reactbits/Noise";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function NoisePage() {
   return (
     <FlexWrapper

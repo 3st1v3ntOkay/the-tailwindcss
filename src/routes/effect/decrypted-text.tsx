@@ -1,7 +1,11 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { DecryptedText } from "@component/reactbits/DecryptedText";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function DecryptedTextPage() {
+  setCreditsTo("reactbits", "https://www.reactbits.dev/text-animations/decrypted-text");
+
   return (
     <FlexWrapper
       mode="dev"

@@ -1,6 +1,8 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { Iridescence } from "@component/reactbits/Iridescence";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function IridescencePage() {
   return (
     <FlexWrapper

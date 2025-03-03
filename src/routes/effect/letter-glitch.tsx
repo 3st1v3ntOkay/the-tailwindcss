@@ -1,6 +1,8 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { LetterGlitch } from "@component/reactbits/LetterGlitch";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function LetterGlitchPage() {
   return (
     <FlexWrapper

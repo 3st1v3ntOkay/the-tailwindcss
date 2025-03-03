@@ -11,6 +11,8 @@ import { SlidingNumber } from "@component/motion-primitives/sliding-number";
 
 import { dataSlidingNumber } from "@data/routes/effect/sliding-number";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function SlidingNumberPage() {
   const [hours, setHours] = useState(new Date().getHours());
   const [minutes, setMinutes] = useState(new Date().getMinutes());

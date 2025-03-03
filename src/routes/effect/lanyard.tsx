@@ -1,6 +1,8 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { Lanyard } from "@component/reactbits/Lanyard";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function LanyardPage() {
   return (
     <FlexWrapper

@@ -1,6 +1,8 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { StarBorder } from "@component/reactbits/StarBorder";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function StarBorderPage() {
   return (
     <FlexWrapper

@@ -1,6 +1,8 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { Magnet } from "@component/reactbits/Magnet";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function MagnetPage() {
   return (
     <FlexWrapper

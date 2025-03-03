@@ -1,7 +1,10 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { FallingText } from "@component/reactbits/FallingText";
+import { setCreditsTo } from "@route/utils/setCreditsTo";
 
 export function FallingTextPage() {
+  setCreditsTo("reactbits", "https://www.reactbits.dev/text-animations/falling-text");
+
   return (
     <FlexWrapper
       mode="dev"

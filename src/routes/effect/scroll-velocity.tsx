@@ -1,6 +1,8 @@
 import { FlexWrapper } from "@component/FlexWrapper";
 import { ScrollVelocity } from "@component/reactbits/ScrollVelocity";
 
+import { setCreditsTo } from "@route/utils/setCreditsTo";
+
 export function ScrollVelocityPage() {
   const velocity: number = 50;
 
