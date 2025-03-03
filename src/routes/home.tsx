@@ -22,6 +22,7 @@ import {
 import { dataEffects } from "@data/effects.data";
 import {
   dataNotesDocs,
+  dataNotesQuickAccess,
   dataNotesRebuild,
   dataNotesTools,
 } from "@data/notes.data";
@@ -38,6 +39,7 @@ function Divider() {
 export function Home() {
   const isDataNotesDocs: boolean = true;
   const isDataNotesRebuild: boolean = true;
+  const isDataNotesQuickAccess: boolean = true;
   const isDataNotesTools: boolean = true;
 
   const isDataDemo: boolean = false;
@@ -68,7 +70,49 @@ export function Home() {
       {/* <Links /> */}
 
       <Paragraph>
-        Documentacion util
+        Accesos rapidos hacia documentaciones:
+      </Paragraph>
+
+      <FlexWrapper
+        mode="dev"
+        color="border-blue-500"
+        direction="flex-col"
+        gap="2"
+        padding={false}
+      >
+        <Notes>
+          {isDataNotesQuickAccess ? dataNotesQuickAccess.map(({
+            id,
+            note,
+            pageUrl,
+            pageName,
+            type,
+          }) => (
+            <Note
+              key={id}
+              note={note}
+              pageUrl={pageUrl}
+              pageName={pageName}
+              type={type}
+            />
+          )) : (
+            <FlexWrapper
+              mode="prod"
+              direction="flex-row"
+              gap="justify-between"
+              color="border-blue-500"
+              padding={false}
+            >
+              <Empty />
+
+              <Status>unavailable</Status>
+            </FlexWrapper>
+          )}
+        </Notes>
+      </FlexWrapper>
+
+      <Paragraph>
+        Articulos y videos para analizar:
       </Paragraph>
 
       <FlexWrapper
@@ -112,7 +156,7 @@ export function Home() {
       <Divider />
 
       <Paragraph>
-        Paginas o ejemplos a reconstruir
+        Paginas o ejemplos a reconstruir:
       </Paragraph>
 
       <FlexWrapper
@@ -156,7 +200,7 @@ export function Home() {
       <Divider />
 
       <Paragraph>
-        Herramientas para probar
+        Herramientas para probar:
       </Paragraph>
 
       <FlexWrapper

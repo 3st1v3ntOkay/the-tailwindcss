@@ -61,18 +61,11 @@ export const dataNotesTools: TData[] = [
   },
 ];
 
-export const dataNotesDocs: TData[] = [
-  {
-    id: 3,
-    note: "Investigar window.location.href",
-    pageUrl: "https://developer.mozilla.org/en-US/docs/Web/API/Location/href",
-    pageName: "mdn web docs",
-    type: "docs",
-  },
+export const dataNotesQuickAccess: TData[] = [
   {
     id: 4,
     note: "React Router v6 docs",
-    pageUrl: "https://reactrouter.com/explanation/progressive-enhancement",
+    pageUrl: "https://reactrouter.com",
     pageName: "react router docs",
     type: "docs",
   },
@@ -81,6 +74,16 @@ export const dataNotesDocs: TData[] = [
     note: "React Router v5 docs",
     pageUrl: "https://v5.reactrouter.com/web/guides/quick-start",
     pageName: "react router docs",
+    type: "docs",
+  },
+];
+
+export const dataNotesDocs: TData[] = [
+  {
+    id: 3,
+    note: "window.location.href",
+    pageUrl: "https://developer.mozilla.org/en-US/docs/Web/API/Location/href",
+    pageName: "mdn web docs",
     type: "docs",
   },
   {
@@ -159,5 +162,12 @@ export const dataNotesDocs: TData[] = [
     pageUrl: "https://www.google.com/search?q=jsxelement+constructor&sca_esv=837abbad405fc9e3&rlz=1C1GEWG_enMX1139MX1139&sxsrf=AHTn8zqB8HH5kH51VWeEk8IwkFz8VvH4Pg%3A1740866053026&ei=BYLDZ-OoAdfF0PEPmMLX4QY&ved=0ahUKEwijv8S17-mLAxXXIjQIHRjhNWwQ4dUDCBA&uact=5&oq=jsxelement+constructor&gs_lp=Egxnd3Mtd2l6LXNlcnAiFmpzeGVsZW1lbnQgY29uc3RydWN0b3IyCRAAGIAEGBMYDTIKEAAYExgFGA0YHjIIEAAYgAQYogQyBRAAGO8FMgUQABjvBUiKCVCsAVisAXABeAGQAQCYAVigAViqAQExuAEDyAEA-AEBmAICoAJkwgIKEAAYsAMY1gQYR5gDAIgGAZAGCJIHATKgB-4D&sclient=gws-wiz-serp",
     pageName: "react research",
     type: "google search",
+  },
+  {
+    id: 16,
+    note: "Set-Cookie",
+    pageUrl: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie",
+    pageName: "mdn docs",
+    type: "docs",
   },
 ];
